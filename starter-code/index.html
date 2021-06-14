@@ -102,8 +102,7 @@
         </div>
       </a></li>
     </ul>
-
-    <div class="tabs planet_buttons_wrapper">
+    <!-- <div class="tabs planet_buttons_wrapper">
 
       <div role="tablist" aria-label="Planet Information" class="planet_details_buttons">
 
@@ -115,57 +114,32 @@
         aria-selected="false">Surface</button>
 
       </div>
-    </div>
+    </div> -->
   </nav>
 
   <main id="mercury" class="planet_main planet_highlights">
-  
-    <div id="overview" class="overview active tablet_desktop_order" role="tabpanel" aria-labelledby="overview_tab">
 
-
-      <div class="tabs planet_details_extended">
-        <div role="tablist" aria-label="Planet Information" class="planet_details_extended_inner">
-  
-          <button role="tab" id="overview_tab" aria-selected="true"><span class="number_opacity">01</span>Overview</button>
-  
-          <button role="tab" id="structure_tab" aria-selected="false">02 Structure</button>
-  
-          <button role="tab" id="surface_tab"
-          aria-selected="false">03 Surface</button>
-  
-        </div>
-    </div>
+    <div class="tabs planet_buttons_wrapper item-buttons">
+      <div role="tablist" aria-label="Planet Information" class="planet_details_buttons">
+        <button role="tab" id="overview_tab" aria-selected="true"><span class="number_opacity">01</span>Overview</button>
+        <button role="tab" id="structure_tab" aria-selected="false"><span class="number_opacity">02</span><span class="tab_desk_vis">Internal </span>Structure</button>
+        <button role="tab" id="surface_tab"
+        aria-selected="false"><span class="number_opacity">03</span>Surface<span class="tab_desk_vis"> Geology</span></button>
       </div>
-    
-    <div id="structure" class="structure" role="tabpanel" aria-labelledby="structure_tab" hidden>
-      <div class="tabs planet_details_extended">
-        <div role="tablist" aria-label="Planet Information" class="planet_details_extended_inner">
-  
-          <button role="tab" id="overview_tab" aria-selected="true"><span class="number_opacity">01</span>Overview</button>
-  
-          <button role="tab" id="structure_tab" aria-selected="false">02 Structure</button>
-  
-          <button role="tab" id="surface_tab"
-          aria-selected="false">03 Surface</button>
-  
-        </div>
-    </div>
     </div>
 
-    <div id="geology" class="geology" role="tabpanel" aria-labelledby="surface_tab" hidden>
-      <div class="tabs planet_details_extended">
-        <div role="tablist" aria-label="Planet Information" class="planet_details_extended_inner">
-  
-          <button role="tab" id="overview_tab" aria-selected="true"><span class="number_opacity">01</span>Overview</button>
-  
-          <button role="tab" id="structure_tab" aria-selected="false">02 Structure</button>
-  
-          <button role="tab" id="surface_tab"
-          aria-selected="false">03 Surface</button>
-  
-        </div>
+    <div id="overview-img" class="overview item-image" role="tabpanel" aria-labelledby="overview_tab" >
     </div>
+
+    <div id="overview" class="overview item-info" role="tabpanel" aria-labelledby="overview_tab" >
+      </div>
+
+    <div id="structure" class="structure item-info" role="tabpanel" aria-labelledby="structure_tab" hidden>
     </div>
+
+    <div id="geology" class="geology item-info" role="tabpanel" aria-labelledby="surface_tab" hidden>
+    </div>
+
   </main>
   <aside id="metaData" class="planet_details">
   </aside>

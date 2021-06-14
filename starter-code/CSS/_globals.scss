@@ -213,24 +213,24 @@ body{
             padding: 1rem 0 0;
             border-top: 1.5px solid rgba(255,255,255,.15);
         }
+    }
 
-        //mobile only buttons
-        .planet_buttons_wrapper{
-            border-top: 1.5px solid rgba(255,255,255,.25);
-            border-bottom: 1.5px solid rgba(255,255,255,.25);
-            width: 100vw;
-            margin: 1.5rem;
-        }
+    //mobile only buttons
+    .planet_buttons_wrapper{
+        border-top: 1.5px solid rgba(255,255,255,.25);
+        border-bottom: 1.5px solid rgba(255,255,255,.25);
+        width: 100vw;
+        margin: 1.5rem;
+    }
 
-        .planet_details_buttons{
-            display: flex;
-            flex-flow: row nowrap;
-            justify-content: space-around;
-            align-items: center;
-            gap: 1rem;
-            margin: 0 1rem;
+    .planet_details_buttons{
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-around;
+        align-items: center;
+        gap: 1rem;
+        margin: 0 1rem;
 
-        }
     }
 
     button {
@@ -242,7 +242,7 @@ body{
         text-transform: uppercase;
     }
     button:hover{
-        padding: 0;
+        padding: 1rem 0;
     }
     button[aria-selected="true"] {
         opacity: 1;
@@ -255,7 +255,12 @@ body{
         outline: 0;
         color: $color_white;
       }
- 
+      .number_opacity{
+        display:none;
+    }
+    .tab_desk_vis{
+        display: none;
+    }
 
 //planet details tabs/buttons//
     .planet_detailsMenu{
@@ -420,7 +425,7 @@ nav{
                 display: none;
             }
             p{
-                font-size: .8rem;
+                font-size: 1rem;
             }
             
         }
@@ -458,19 +463,40 @@ nav{
             display: none;
         }
     }
-//when clicked to open, use these attributes//
+}
+//Tab buttons Section
+.planet_buttons_wrapper{
+    // border-top: 1.5px solid rgba(255,255,255,.25);
+    // border-bottom: 1.5px solid rgba(255,255,255,.25);
+    width: 40vw;
+    margin: 1.5rem;
+    order: 2;
+    border: none;
+}
 
-    //mobile only buttons
-    .planet_buttons_wrapper{
-        display: none;
-    }
+.planet_details_buttons{
+    // display: flex;
+    // flex-flow: row nowrap;
+    // justify-content: space-around;
+    // align-items: center;
+    // gap: 1rem;
+    // margin: 0 1rem;
 
-    .planet_details_buttons{
-        display: none;
-    }
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 1rem;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+
 }
 
 button {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    gap:.5rem;
     padding: 1rem;
     border: 1px solid rgba(255,255,255,.15);
     color: $color_white;
@@ -482,6 +508,7 @@ button {
 }
 button:hover{
     background-color: rgba(255,255,255,.15);
+    padding: 1rem;
 }
 button[aria-selected="true"] {
     opacity: 1;
@@ -497,57 +524,12 @@ button:focus {
 .number_opacity{
     opacity: .5;
     padding-right: 1rem;
+    display: block;
 }
-//**--desktop and tablet only buttons--**//
-.planet_details_extended{
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
-    order: 4;
+.tab_desk_vis{
+    display:block;
 }
-.planet_details_extended_inner{
-    display: flex;
-    flex-flow: column nowrap;
-    gap: 1rem;
-    justify-content: flex-start;
-    align-items: flex-start;
-    width: 35vw;
-}
-.planet_image_wrapper{
-    width: 100%;
-    margin: 0 50%;
-}
-
-.tablet_desktop_order{
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
-    text-align: left;
-    margin-top: 3rem;
-    margin-bottom: 0;
-    width: 100vw;
-}
-.tablet_desktop_wrapper{
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 1rem;
-    width: 45%;
-    margin-right: 10vw;
-
-    p{
-        text-align: left;
-    }
-    
-}
-//**--END desktop and tablet only buttons--**//
-
-
+  
 //planet details tabs/buttons//
 .planet_detailsMenu{
     display: flex;
@@ -563,59 +545,44 @@ button:focus {
 }
 //planet main content
 .planet_main{
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
-    align-items: center;
-    margin: 0rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+    "planet planet"
+    "info buttons";
+    margin: 0 2rem;
+    // flex-flow: column nowrap;
+    // justify-content: center;
+    // align-items: center;
+    // margin: 0rem;
     h1{
         margin: .5rem 0;
     }
-}
-//determines size and margin of planet images
-.planet{
-    // margin: 3rem 0;
 
-    .mercury{
-        width: 6.93rem;
-        margin-bottom: 3rem;
+    .item-image{
+        grid-area: planet;
+        justify-self: center;
     }
-    .venus{
-        width: 9.625rem;
-        margin-bottom: 3rem;
+    .item-info{
+        grid-area: info;
+        // grid-area: info-section;
+        justify-self: left;
+        width: 100%;
+        text-align: left;
     }
-    .earth{
-        width: 10.81rem;
-        margin-bottom: 3rem;
-    }
-    .mars{
-        width: 8.06rem;
-        margin-bottom: 3rem;
-    }
-    .jupiter{
-        width: 14rem;
-        margin-bottom: 3rem;
-    }
-    .saturn{
-        width: 16rem;
-        margin-bottom: 3rem;
-    }
-    .uranus{
-        width: 11rem;
-        margin-bottom: 3rem;
-    }
-    .neptune{
-        width: 10.81rem;
-        margin-bottom: 3rem;
+    .item-buttons{
+        grid-area: buttons;
+        justify-self: center;
+        width: 90%;
     }
 }
+
+
 //Main Details section//
 .planet_highlights{
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+    margin: .5;
+    text-align: left;
 }
 .source{
     opacity: .5;
@@ -628,7 +595,43 @@ button:focus {
        padding-left: 1.5rem;
     }
 } 
+//determines size and margin of planet images
+.planet{
+    margin:0;
 
+    .mercury{
+        width: 7.93rem;
+        margin-bottom: 3rem;
+    }
+    .venus{
+        width: 10.625rem;
+        margin-bottom: 3rem;
+    }
+    .earth{
+        width: 11.81rem;
+        margin-bottom: 3rem;
+    }
+    .mars{
+        width: 9.06rem;
+        margin-bottom: 3rem;
+    }
+    .jupiter{
+        width: 15rem;
+        margin-bottom: 3rem;
+    }
+    .saturn{
+        width: 16rem;
+        margin-bottom: 3rem;
+    }
+    .uranus{
+        width: 12rem;
+        margin-bottom: 3rem;
+    }
+    .neptune{
+        width: 11.81rem;
+        margin-bottom: 3rem;
+    }
+}
 
 //additional details - doesnt change with button selection//
 .planet_details{
