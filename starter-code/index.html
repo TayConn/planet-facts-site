@@ -120,21 +120,52 @@
 
   <main id="mercury" class="planet_main planet_highlights">
   
-    <div id="overview" class="overview active" role="tabpanel" aria-labelledby="overview_tab">
+    <div id="overview" class="overview active tablet_desktop_order" role="tabpanel" aria-labelledby="overview_tab">
+
+
+      <div class="tabs planet_details_extended">
+        <div role="tablist" aria-label="Planet Information" class="planet_details_extended_inner">
+  
+          <button role="tab" id="overview_tab" aria-selected="true"><span class="number_opacity">01</span>Overview</button>
+  
+          <button role="tab" id="structure_tab" aria-selected="false">02 Structure</button>
+  
+          <button role="tab" id="surface_tab"
+          aria-selected="false">03 Surface</button>
+  
+        </div>
+    </div>
       </div>
     
     <div id="structure" class="structure" role="tabpanel" aria-labelledby="structure_tab" hidden>
+      <div class="tabs planet_details_extended">
+        <div role="tablist" aria-label="Planet Information" class="planet_details_extended_inner">
+  
+          <button role="tab" id="overview_tab" aria-selected="true"><span class="number_opacity">01</span>Overview</button>
+  
+          <button role="tab" id="structure_tab" aria-selected="false">02 Structure</button>
+  
+          <button role="tab" id="surface_tab"
+          aria-selected="false">03 Surface</button>
+  
+        </div>
+    </div>
     </div>
 
     <div id="geology" class="geology" role="tabpanel" aria-labelledby="surface_tab" hidden>
+      <div class="tabs planet_details_extended">
+        <div role="tablist" aria-label="Planet Information" class="planet_details_extended_inner">
+  
+          <button role="tab" id="overview_tab" aria-selected="true"><span class="number_opacity">01</span>Overview</button>
+  
+          <button role="tab" id="structure_tab" aria-selected="false">02 Structure</button>
+  
+          <button role="tab" id="surface_tab"
+          aria-selected="false">03 Surface</button>
+  
+        </div>
     </div>
-
-    <div class="planet_details_extended">
-      <button>01 Overview</button>
-      <button>02 Internal Structure</button>
-      <button>03 Surface Geology</button>
     </div>
-
   </main>
   <aside id="metaData" class="planet_details">
   </aside>

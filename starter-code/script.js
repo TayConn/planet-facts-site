@@ -100,26 +100,33 @@ const planetSelected = planetGrabber[0].id; //identifying the planet name to use
         const overviewContainer = document.getElementById('overview');//identify the container for overview via element ID// 
         overviewContainer.classList.add('planet');//adds planet class to overview
         for (var i = 0; i <data.length; i++){//appends data to div
+                const planet_image_wrapper = document.createElement('div');
+                planet_image_wrapper.classList.add('planet_image_wrapper');
+
                 const planet_image = document.createElement('img');//create img variable
                 planet_image.classList.add(`${planetSelected}`);//add variable class to image
                 planet_image.src = data[i][planetSelected].images.planet;//add source to img
                 planet_image.alt = data[i][planetSelected].overview.alt;//add alt desc to img
-                overviewContainer.appendChild(planet_image);//add img to parent div
+                planet_image_wrapper.appendChild(planet_image);//add img to parent div
+                overviewContainer.appendChild(planet_image_wrapper);//add img to parent div
 
+                const planet_details = document.createElement('div');
+                planet_details.classList.add('tablet_desktop_wrapper');
                 const planet_name = document.createElement('h1');//create h1 element variable
                 planet_name.innerHTML = data[i][planetSelected].name;//feed data from json into variable html
-                overviewContainer.appendChild(planet_name);//append h1 to parent div
+                planet_details.appendChild(planet_name);//append h1 to parent div
 
                 const paragraph_overview = document.createElement('p'); // create new div element
                 paragraph_overview.classList.add('planet_highlights', 'overview');//adds classes to div
                 paragraph_overview.innerHTML = data[i][planetSelected].overview.content;//adds json data to html
-                overviewContainer.appendChild(paragraph_overview);//appends div to html
-
+                planet_details.appendChild(paragraph_overview);//appends div to html
+                
                 const paragraph_source = document.createElement('p');//create paragraph element
                 paragraph_source.classList.add('source');//add class to paragraph
                 paragraph_source.innerHTML = `
                 Source : <a href="`+data[i][planetSelected].overview.source+`" title="Click here to visit the wikipedia page">Wikipedia <i class="fas fa-external-link-square-alt"></i></a>`;//add inner html with anchor tag into paragraph
-                overviewContainer.appendChild(paragraph_source);//add paragraph element to parent element
+                planet_details.appendChild(paragraph_source);//add paragraph element to parent element
+                overviewContainer.appendChild(planet_details);//appends div to html
             }
             
     }
