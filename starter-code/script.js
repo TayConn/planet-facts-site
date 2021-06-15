@@ -141,18 +141,18 @@ const planetSelected = planetGrabber[0].id; //identifying the planet name to use
 //create function to populate planet images
 function appendOverviewImgData(data){
     const overviewImgContainer = document.getElementById('overview-img');//identify the container for overview via element ID// 
-    overviewImgContainer.classList.add('planet');//adds planet class to overview
+    overviewImgContainer.classList.add('planet', 'item-image');//adds planet class to overview
     for (var i = 0; i <data.length; i++){
         //planet content
-        const planet_image_wrapper = document.createElement('div');
-        planet_image_wrapper.classList.add('item-image');
+        // const planet_image_wrapper = document.createElement('div');
+        // planet_image_wrapper.classList.add('item-image');
 
         const planet_image = document.createElement('img');//create img variable
         planet_image.classList.add(`${planetSelected}`);//add variable class to image
         planet_image.src = data[i][planetSelected].overview.image;//add source to img
         planet_image.alt = data[i][planetSelected].overview.alt;//add alt desc to img
-        planet_image_wrapper.appendChild(planet_image);//add img to parent div
-        overviewImgContainer.appendChild(planet_image_wrapper);//add img to parent div
+        overviewImgContainer.appendChild(planet_image);//add img to parent div
+        // overviewImgContainer.appendChild(planet_image_wrapper);//add img to parent div
     }
 }
 
@@ -198,18 +198,18 @@ function appendOverviewImgData(data){
 //create function to populate planet images
 function appendStructureImgData(data){
     const structureImgContainer = document.getElementById('structure-img');//identify the container for structure via element ID// 
-    structureImgContainer.classList.add('planet');//adds planet class to overview
+    structureImgContainer.classList.add('planet', 'item-image');//adds planet class to overview
     for (var i = 0; i <data.length; i++){
         //planet content
-        const planet_image_wrapper = document.createElement('div');
-        planet_image_wrapper.classList.add('item-image');
+        // const planet_image_wrapper = document.createElement('div');
+        // planet_image_wrapper.classList.add('item-image');
 
         const planet_image = document.createElement('img');//create img variable
         planet_image.classList.add(`${planetSelected}`);//add variable class to image
         planet_image.src = data[i][planetSelected].structure.image;//add source to img
         planet_image.alt = data[i][planetSelected].structure.alt;//add alt desc to img
-        planet_image_wrapper.appendChild(planet_image);//add img to parent div
-        structureImgContainer.appendChild(planet_image_wrapper);//add img to parent div
+        structureImgContainer.appendChild(planet_image);//add img to parent div
+        // structureImgContainer.appendChild(planet_image_wrapper);//add img to parent div
     }
 }
 
@@ -253,18 +253,18 @@ function appendStructureImgData(data){
         //create function to populate planet images
 function appendGeologyImgData(data){
     const geologyImgContainer = document.getElementById('geology-img');//identify the container for overview via element ID// 
-    geologyImgContainer.classList.add('planet');//adds planet class to overview
+    geologyImgContainer.classList.add('planet', 'item-image');//adds planet class to overview
     for (var i = 0; i <data.length; i++){
         //planet content
-        const planet_image_wrapper = document.createElement('div');
-        planet_image_wrapper.classList.add('item-image');
+        // const planet_image_wrapper = document.createElement('div');
+        // planet_image_wrapper.classList.add('item-image');
 
         const planet_image = document.createElement('img');//create img variable
         planet_image.classList.add(`${planetSelected}`);//add variable class to image
         planet_image.src = data[i][planetSelected].geology.image;//add source to img
         planet_image.alt = data[i][planetSelected].geology.alt;//add alt desc to img
-        planet_image_wrapper.appendChild(planet_image);//add img to parent div
-        geologyImgContainer.appendChild(planet_image_wrapper);//add img to parent div
+        geologyImgContainer.appendChild(planet_image);//add img to parent div
+        // geologyImgContainer.appendChild(planet_image_wrapper);//add img to parent div
     }
 }
 //** function to fill html and data into the geoloy tab **//
