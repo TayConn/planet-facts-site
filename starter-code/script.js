@@ -63,7 +63,6 @@ fetch('data.json')
         console.log(err);
     });
 
-
 //..FETCH API FOR structure section..//
 fetch('data.json')
     .then(function (response){//the json data will arrive here//
@@ -129,9 +128,7 @@ function handleTabClick(event) {
     panel.hidden = false;
   });
 }
-
 tabButtons.forEach(button => button.addEventListener('click', handleTabClick));
-
 
 
 //** DATA STRUCTURE FOR .JSON TO HTML **/
@@ -143,35 +140,20 @@ function appendOverviewImgData(data){
     const overviewImgContainer = document.getElementById('overview-img');//identify the container for overview via element ID// 
     overviewImgContainer.classList.add('planet', 'item-image');//adds planet class to overview
     for (var i = 0; i <data.length; i++){
-        //planet content
-        // const planet_image_wrapper = document.createElement('div');
-        // planet_image_wrapper.classList.add('item-image');
-
+        //planet image content
         const planet_image = document.createElement('img');//create img variable
         planet_image.classList.add(`${planetSelected}`);//add variable class to image
         planet_image.src = data[i][planetSelected].overview.image;//add source to img
         planet_image.alt = data[i][planetSelected].overview.alt;//add alt desc to img
         overviewImgContainer.appendChild(planet_image);//add img to parent div
-        // overviewImgContainer.appendChild(planet_image_wrapper);//add img to parent div
+        
     }
 }
 
     //** create loop functoin to get object from json and append to div **//
     function appendOverviewData(data){
         const overviewContainer = document.getElementById('overview');//identify the container for overview via element ID// 
-        // overviewContainer.classList.add('planet');//adds planet class to overview
         for (var i = 0; i <data.length; i++){//appends data to div
-
-                // //planet content
-                // const planet_image_wrapper = document.createElement('div');
-                // planet_image_wrapper.classList.add('item-image');
-
-                // const planet_image = document.createElement('img');//create img variable
-                // planet_image.classList.add(`${planetSelected}`);//add variable class to image
-                // planet_image.src = data[i][planetSelected].images.planet;//add source to img
-                // planet_image.alt = data[i][planetSelected].overview.alt;//add alt desc to img
-                // planet_image_wrapper.appendChild(planet_image);//add img to parent div
-                // overviewContainer.appendChild(planet_image_wrapper);//add img to parent div
 
                 const planet_details = document.createElement('div');
                 planet_details.classList.add('item-info');
@@ -200,34 +182,21 @@ function appendStructureImgData(data){
     const structureImgContainer = document.getElementById('structure-img');//identify the container for structure via element ID// 
     structureImgContainer.classList.add('planet', 'item-image');//adds planet class to overview
     for (var i = 0; i <data.length; i++){
-        //planet content
-        // const planet_image_wrapper = document.createElement('div');
-        // planet_image_wrapper.classList.add('item-image');
+        //planet image content
 
         const planet_image = document.createElement('img');//create img variable
         planet_image.classList.add(`${planetSelected}`);//add variable class to image
         planet_image.src = data[i][planetSelected].structure.image;//add source to img
         planet_image.alt = data[i][planetSelected].structure.alt;//add alt desc to img
         structureImgContainer.appendChild(planet_image);//add img to parent div
-        // structureImgContainer.appendChild(planet_image_wrapper);//add img to parent div
     }
 }
 
 //** function to fill html and data into the structure tab **//
     function appendStructureData(data) {
         const structureContainer = document.getElementById('structure');//identify the container for overview via element ID// 
-            //   structureContainer.classList.add('planet');//adds planet class to overview
             for (var i = 0; i <data.length; i++){//appends data to div
-                // const planet_image_wrapper = document.createElement('div');
-                // planet_image_wrapper.classList.add('item-image');
-
-                // const planet_image = document.createElement('img');//create img variable
-                // planet_image.classList.add(`${planetSelected}`);//add variable planet class to image
-                // planet_image.src = data[i][planetSelected].images.internal;//add source to img
-                // planet_image.alt = data[i][planetSelected].structure.alt;//add alt desc to img
-                // planet_image_wrapper.appendChild(planet_image);//add img to parent div
-                // structureContainer.appendChild(planet_image_wrapper);//appends div to html
-
+             
                 const planet_details = document.createElement('div');
                 planet_details.classList.add('item-info');
 
@@ -255,33 +224,19 @@ function appendGeologyImgData(data){
     const geologyImgContainer = document.getElementById('geology-img');//identify the container for overview via element ID// 
     geologyImgContainer.classList.add('planet', 'item-image');//adds planet class to overview
     for (var i = 0; i <data.length; i++){
-        //planet content
-        // const planet_image_wrapper = document.createElement('div');
-        // planet_image_wrapper.classList.add('item-image');
-
+        //planet image content
         const planet_image = document.createElement('img');//create img variable
         planet_image.classList.add(`${planetSelected}`);//add variable class to image
         planet_image.src = data[i][planetSelected].geology.image;//add source to img
         planet_image.alt = data[i][planetSelected].geology.alt;//add alt desc to img
         geologyImgContainer.appendChild(planet_image);//add img to parent div
-        // geologyImgContainer.appendChild(planet_image_wrapper);//add img to parent div
     }
 }
 //** function to fill html and data into the geoloy tab **//
     function appendGeologyData(data) {
         const geologyContainer = document.getElementById('geology');//identify the container for overview via element ID// 
-            // geologyContainer.classList.add('planet');//adds planet class to overview
             for (var i = 0; i <data.length; i++){//appends data to div
-                // const planet_image_wrapper = document.createElement('div');
-                // planet_image_wrapper.classList.add('item-image');
-
-                // const planet_image = document.createElement('img');//create img variable
-                // planet_image.classList.add(`${planetSelected}`);//add variable planet class to image
-                // planet_image.src = data[i][planetSelected].images.geology;//add source to img
-                // planet_image.alt = data[i][planetSelected].geology.alt;//add alt desc to img
-                // planet_image_wrapper.appendChild(planet_image);//add img to parent div
-                // geologyContainer.appendChild(planet_image_wrapper);//appends div to html
-
+       
                 const planet_details = document.createElement('div');
                 planet_details.classList.add('item-info');
 

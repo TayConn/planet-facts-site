@@ -1,0 +1,4 @@
+Example URL: https://api.nasa.gov/planetary/apod?api_key=E4LZoIy0JjVI69H3NFFTxj2zg9Zcz6NwPGFLogq2
+
+API Key: E4LZoIy0JjVI69H3NFFTxj2zg9Zcz6NwPGFLogq2
+

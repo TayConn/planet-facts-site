@@ -664,33 +664,34 @@ button:focus {
 
 }
 
-@media screen and (min-width: 1025px) and (max-width: 1920px){
+@media screen and (min-width: 1025px) and (max-width: 3840px){
     //navigation menu//
+    
     nav{
         display: flex;
-        flex-flow: column nowrap;
+        flex-flow: row nowrap;
         justify-content: space-between;
         align-items: center;
-    
+        border-bottom: 1px solid rgba(255,255,255,.25);
         h2{
             margin: 0;
         }
         .nav_top{
-        width: 100%;
+        width: 80%;
         }
         .nav_inner_wrapper{
             display: flex;
             flex-flow: row nowrap;
-            justify-content: center;
+            justify-content: flex-start;
             align-items: center;
-            margin: 1rem;
+            margin: 0 1.5rem 1rem;
     
             //hamburger menu button//
             button{
                 display: none;
             }
         }
-    //hide nav menu unless triggered by click in JS//
+    //hide nav menu unless triggered by click in JS//w
         .nav_menu{
             display: flex;
             flex-flow: row wrap;
@@ -698,7 +699,7 @@ button:focus {
             align-items: center;
             gap: 1rem;
             width: 100%;
-            margin: 1rem;
+            margin: 0 1.5rem 1rem;
             padding: 0;
             .menu_item{
                 display: flex;
@@ -732,9 +733,13 @@ button:focus {
             li{
                 list-style-type: none;
                 cursor: pointer;
+                border-top: 3px solid transparent;
+                padding-top: 1rem;
             }
             li:hover{
-                background-color: rgba(255,255,255,.15);
+                // background-color: rgba(255,255,255,.15);
+                border-top: 3px solid $color_aqua;
+                padding-top: 1rem;
             }
             a{
                 text-decoration: none;
@@ -752,29 +757,19 @@ button:focus {
     }
     //Tab buttons Section
     .planet_buttons_wrapper{
-        // border-top: 1.5px solid rgba(255,255,255,.25);
-        // border-bottom: 1.5px solid rgba(255,255,255,.25);
         width: 40vw;
-        margin: 1.5rem;
-        order: 2;
+        margin: 0;
         border: none;
     }
     
     .planet_details_buttons{
-        // display: flex;
-        // flex-flow: row nowrap;
-        // justify-content: space-around;
-        // align-items: center;
-        // gap: 1rem;
-        // margin: 0 1rem;
-    
         display: flex;
         flex-flow: column nowrap;
         gap: 1rem;
         justify-content: flex-start;
         align-items: flex-start;
         width: 100%;
-    
+        margin: 0;
     }
     
     button {
@@ -783,8 +778,8 @@ button:focus {
         justify-content: flex-start;
         align-items: center;
         gap:.5rem;
-        padding: 1rem;
-        border: 1px solid rgba(255,255,255,.15);
+        padding: 1rem 1.5rem;
+        border: 1px solid rgba(255,255,255,.25);
         color: $color_white;
         background-color: transparent;
         text-transform: uppercase;
@@ -793,15 +788,17 @@ button:focus {
         margin-left: 0vw;
     }
     button:hover{
-        background-color: rgba(255,255,255,.15);
-        padding: 1rem;
+        background-color: rgba(255,255,255,.25);
+        padding: 1rem 1.5rem;
+        border: none;
     }
     button[aria-selected="true"] {
         opacity: 1;
         background-color: $color_aqua;
+        border: none;
     }
     button[aria-selected="false"] {
-        opacity: .5;
+        opacity: 1;
     }
     button:focus {
         outline: 0;
@@ -832,16 +829,12 @@ button:focus {
     //planet main content
     .planet_main{
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1.75fr .75fr;
         grid-template-rows: 1fr 1fr;
         grid-template-areas:
         "planet info"
         "planet buttons";
-        margin: 0 10rem;
-        // flex-flow: column nowrap;
-        // justify-content: center;
-        // align-items: center;
-        // margin: 0rem;
+        margin: 5rem 6rem 0;
         h1{
             margin: .5rem 0;
         }
@@ -852,16 +845,19 @@ button:focus {
         }
         .item-info{
             grid-area: info;
-            // grid-area: info-section;
-            justify-self: left;
+            justify-self: stretch;
             width: 100%;
             text-align: left;
+
+            h1{
+                padding-bottom: 1rem;
+            }
         }
         .item-buttons{
             grid-area: buttons;
-            justify-self: left;
+            justify-self: stretch;
             align-self: left;
-            width: 90%;
+            width: 100%;
         }
     }
     
@@ -870,16 +866,20 @@ button:focus {
     .planet_highlights{
         margin: .5;
         text-align: left;
+        max-width: 100%;
+        
     }
     .source{
         opacity: .5;
+        padding-top: 2.5rem;
+        margin-bottom: 0;
         a{
         
             color: inherit;   
         }
         i{
            font-size: 1rem;
-           padding-left: 1.5rem;
+           padding-left: 2rem;
         }
     } 
     //determines size and margin of planet images
@@ -887,35 +887,35 @@ button:focus {
         margin:0;
     
         .mercury{
-            width: 9.93rem;
+            width: 11.93rem;
             margin-bottom: 3rem;
         }
         .venus{
-            width: 12.625rem;
+            width: 14.625rem;
             margin-bottom: 3rem;
         }
         .earth{
-            width: 13.81rem;
+            width: 15.81rem;
             margin-bottom: 3rem;
         }
         .mars{
-            width: 11.06rem;
+            width: 13.06rem;
             margin-bottom: 3rem;
         }
         .jupiter{
-            width: 17rem;
+            width: 19rem;
             margin-bottom: 3rem;
         }
         .saturn{
-            width: 18rem;
+            width: 20rem;
             margin-bottom: 3rem;
         }
         .uranus{
-            width: 14rem;
+            width: 16rem;
             margin-bottom: 3rem;
         }
         .neptune{
-            width: 13.81rem;
+            width: 15.81rem;
             margin-bottom: 3rem;
         }
     }
@@ -926,12 +926,16 @@ button:focus {
         flex-flow: row nowrap;
         justify-content: space-between;
         align-items: center;
-        gap: 0 .75rem;
-        margin: 1.5rem;
+        gap: 0 2rem;
+        margin: 1rem 6.31rem;
         text-transform: uppercase;
     
         h4{
             opacity: 50%;
+        }
+        h3{
+            font-size: 2rem;
+            padding-top: .75rem;
         }
     
         .planet_details_sub{
@@ -940,7 +944,7 @@ button:focus {
             justify-content: flex-start;
             align-items: flex-start;
             border: 1px solid rgba(255,255,255,.5);
-            padding: 1.125rem;
+            padding: 2rem;
             width: 100%;
     
             h3, h4{
