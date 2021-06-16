@@ -706,7 +706,7 @@ button:focus {
         grid-template-columns: 1fr 1fr;
     -ms-grid-rows: 1fr 1fr;
         grid-template-rows: 1fr 1fr;
-        grid-template-areas: "planet planet" "info buttons";
+        grid-template-areas: "planet planet" "info buttons";
     margin: 0 2rem;
   }
   .planet_main h1 {
@@ -1051,7 +1051,7 @@ button:focus {
         grid-template-columns: 1fr 1fr;
     -ms-grid-rows: 1fr 1fr;
         grid-template-rows: 1fr 1fr;
-        grid-template-areas: "planet info" "planet buttons";
+        grid-template-areas: "planet info" "planet buttons";
     margin: 0 10rem;
   }
   .planet_main h1 {
