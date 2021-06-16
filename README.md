@@ -55,7 +55,7 @@ I decided to take a JS-heavy approach, using the provided local `data.json` file
     </div>
 ```
 ```css - Targeting styling based on aria selection was new to me! Great to target it based off of actions taken by users and translated through JS.
-.proud-of-this-css {
+
    button[aria-selected="true"] { /*activates a change in styling when aria-selected is = to true*/
         opacity: 1;
         background-color: $color_aqua;
@@ -63,10 +63,9 @@ I decided to take a JS-heavy approach, using the provided local `data.json` file
     button[aria-selected="false"] {/*activates a change in styling when aria-selected is = to false*/
         opacity: .5;
     }
-}
 ```
 ```js
-const proudOfThisFunc = () => {
+
   function appendOverviewImgData(data){
     const overviewImgContainer = document.getElementById('overview-img');//identify the container for overview via element ID// 
     overviewImgContainer.classList.add('planet', 'item-image');//adds planet class to overview
@@ -80,6 +79,6 @@ const proudOfThisFunc = () => {
    
     }
 }
-}
+
 ```
 
