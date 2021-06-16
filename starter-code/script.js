@@ -16,86 +16,103 @@ hamburger.addEventListener('click', () => {
 //----.json file fetch API - get data from json file to populate planet information----//
 //----tell API where to find file, local directory so this is all that is needed ----//
 
-//..FETCH API FOR overview section..//
-fetch('data.json')
-    .then(function (response){//the json data will arrive here//
-        return response.json();
-    })
-    .then(function (data) {//retrieves actual json data as a parameter identical to data in .json file//
-        appendOverviewData(data);
-    })
-    .catch(function (err) { //displays an error in the console in case something went wrong//
-        console.log(err);
-    });
+//json test rewrite
+const myRequest = new Request('data.json');
 
+fetch(myRequest)
+  .then(response => response.json())
+  .then(data => {
+      const returnedData = data;
+      console.log(returnedData);
+    //   return returnedData;
+  })
+  .catch(console.error);
+  
+  let planet = returnedData.filter(selectedPlanet => selectedPlanet[planetSelected]);
+  console.log(planet);
 //..FETCH API FOR overview section..//
-fetch('data.json')
-    .then(function (response){//the json data will arrive here//
-        return response.json();
-    })
-    .then(function (data) {//retrieves actual json data as a parameter identical to data in .json file//
-        appendOverviewImgData(data);
-    })
-    .catch(function (err) { //displays an error in the console in case something went wrong//
-        console.log(err);
-    });
 
-//..FETCH API FOR overview section..//
-fetch('data.json')
-    .then(function (response){//the json data will arrive here//
-        return response.json();
-    })
-    .then(function (data) {//retrieves actual json data as a parameter identical to data in .json file//
-        appendStructureImgData(data);
-    })
-    .catch(function (err) { //displays an error in the console in case something went wrong//
-        console.log(err);
-    });
-//..FETCH API FOR overview section..//
-fetch('data.json')
-    .then(function (response){//the json data will arrive here//
-        return response.json();
-    })
-    .then(function (data) {//retrieves actual json data as a parameter identical to data in .json file//
-        appendGeologyImgData(data);
-    })
-    .catch(function (err) { //displays an error in the console in case something went wrong//
-        console.log(err);
-    });
+// fetch('data.json')
+//     .then(function (response){//the json data will arrive here//
+//         return response.json();
+//     })
+//     .then(function (data) {//retrieves actual json data as a parameter identical to data in .json file//
+//         appendOverviewData(data);
+        
+//     })
+    
+//     .catch(function (error) { //displays an error in the console in case something went wrong//
+//         console.log(error);
+//     });
 
-//..FETCH API FOR structure section..//
-fetch('data.json')
-    .then(function (response){//the json data will arrive here//
-        return response.json();
-    })
-    .then(function (data) {//retrieves actual json data as a parameter identical to data in .json file//
-        appendStructureData(data);
-    })
-    .catch(function (err) { //displays an error in the console in case something went wrong//
-         console.log(err);
-    });
-//..FETCH API FOR geology section..//
-fetch('data.json')
-    .then(function (response){//the json data will arrive here//
-        return response.json();
-    })
-    .then(function (data) {//retrieves actual json data as a parameter identical to data in .json file//
-        appendGeologyData(data);
-    })
-    .catch(function (err) { //displays an error in the console in case something went wrong//
-         console.log(err);
-    });
-//..FETCH API FOR metadata section..//
-    fetch('data.json')
-    .then(function (response){//the json data will arrive here//
-        return response.json();
-    })
-    .then(function (data) {//retrieves actual json data as a parameter identical to data in .json file//
-        appendMetaData(data);
-    })
-    .catch(function (err) { //displays an error in the console in case something went wrong//
-         console.log(err);
-    });
+// //..FETCH API FOR overview section..//
+// fetch('data.json')
+//     .then(function (response){//the json data will arrive here//
+//         return response.json();
+//     })
+//     .then(function (data) {//retrieves actual json data as a parameter identical to data in .json file//
+//         appendOverviewImgData(data);
+//     })
+//     .catch(function (error) { //displays an error in the console in case something went wrong//
+//         console.log(error);
+//     });
+
+// //..FETCH API FOR overview section..//
+// fetch('data.json')
+//     .then(function (response){//the json data will arrive here//
+//         return response.json();
+//     })
+//     .then(function (data) {//retrieves actual json data as a parameter identical to data in .json file//
+//         appendStructureImgData(data);
+//     })
+//     .catch(function (error) { //displays an error in the console in case something went wrong//
+//         console.log(error);
+//     });
+// //..FETCH API FOR overview section..//
+// fetch('data.json')
+//     .then(function (response){//the json data will arrive here//
+//         return response.json();
+//     })
+//     .then(function (data) {//retrieves actual json data as a parameter identical to data in .json file//
+//         appendGeologyImgData(data);
+//     })
+//     .catch(function (error) { //displays an error in the console in case something went wrong//
+//         console.log(error);
+//     });
+
+// //..FETCH API FOR structure section..//
+// fetch('data.json')
+//     .then(function (response){//the json data will arrive here//
+//         return response.json();
+//     })
+//     .then(function (data) {//retrieves actual json data as a parameter identical to data in .json file//
+//         appendStructureData(data);
+//     })
+//     .catch(function (error) { //displays an error in the console in case something went wrong//
+//          console.log(error);
+//     });
+// //..FETCH API FOR geology section..//
+// fetch('data.json')
+//     .then(function (response){//the json data will arrive here//
+//         return response.json();
+//     })
+//     .then(function (data) {//retrieves actual json data as a parameter identical to data in .json file//
+//         appendGeologyData(data);
+//     })
+//     .catch(function (error) { //displays an error in the console in case something went wrong//
+//          console.log(error);
+//     });
+// //..FETCH API FOR metadata section..//
+//     fetch('data.json')
+//     .then(function (response){//the json data will arrive here//
+//         return response.json();
+//     })
+//     .then(function (data) {//retrieves actual json data as a parameter identical to data in .json file//
+//         appendMetaData(data);
+//     })
+//     .catch(function (error) { //displays an error in the console in case something went wrong//
+//          console.log(error);
+//     });
     
 //TAB SWITCHING LOGIC FOR MOBILE//
 const tabs = document.querySelector('.tabs');

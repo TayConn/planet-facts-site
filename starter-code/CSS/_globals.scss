@@ -698,7 +698,7 @@ button:focus {
             justify-content: center;
             align-items: center;
             gap: 1rem;
-            width: 100%;
+            width: 40%;
             margin: 0 1.5rem 1rem;
             padding: 0;
             .menu_item{
@@ -786,6 +786,7 @@ button:focus {
         width: 100%;
         text-align: left;
         margin-left: 0vw;
+        font-size: 1.25rem;
     }
     button:hover{
         background-color: rgba(255,255,255,.25);
@@ -852,6 +853,7 @@ button:focus {
             h1{
                 padding-bottom: 1rem;
             }
+
         }
         .item-buttons{
             grid-area: buttons;
@@ -867,12 +869,15 @@ button:focus {
         margin: .5;
         text-align: left;
         max-width: 100%;
+        font-size: 1.5rem;
+        line-height: 2.5rem;
         
     }
     .source{
         opacity: .5;
         padding-top: 2.5rem;
         margin-bottom: 0;
+        font-size: 1.5rem;
         a{
         
             color: inherit;   
@@ -887,35 +892,35 @@ button:focus {
         margin:0;
     
         .mercury{
-            width: 11.93rem;
+            width: 15.93rem;
             margin-bottom: 3rem;
         }
         .venus{
-            width: 14.625rem;
+            width: 19.625rem;
             margin-bottom: 3rem;
         }
         .earth{
-            width: 15.81rem;
+            width: 19.81rem;
             margin-bottom: 3rem;
         }
         .mars{
-            width: 13.06rem;
+            width: 17.06rem;
             margin-bottom: 3rem;
         }
         .jupiter{
-            width: 19rem;
+            width: 23rem;
             margin-bottom: 3rem;
         }
         .saturn{
-            width: 20rem;
+            width: 24rem;
             margin-bottom: 3rem;
         }
         .uranus{
-            width: 16rem;
+            width: 20rem;
             margin-bottom: 3rem;
         }
         .neptune{
-            width: 15.81rem;
+            width: 19.81rem;
             margin-bottom: 3rem;
         }
     }
@@ -932,10 +937,11 @@ button:focus {
     
         h4{
             opacity: 50%;
+            font-size: 1rem;
         }
         h3{
             font-size: 2rem;
-            padding-top: .75rem;
+            padding-top: 1rem;
         }
     
         .planet_details_sub{

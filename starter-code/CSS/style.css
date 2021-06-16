@@ -706,7 +706,7 @@ button:focus {
         grid-template-columns: 1fr 1fr;
     -ms-grid-rows: 1fr 1fr;
         grid-template-rows: 1fr 1fr;
-        grid-template-areas: "planet planet" "info buttons";
+        grid-template-areas: "planet planet" "info buttons";
     margin: 0 2rem;
   }
   .planet_main h1 {
@@ -887,7 +887,7 @@ button:focus {
         -ms-flex-align: center;
             align-items: center;
     gap: 1rem;
-    width: 100%;
+    width: 40%;
     margin: 0 1.5rem 1rem;
     padding: 0;
   }
@@ -1002,6 +1002,7 @@ button:focus {
     width: 100%;
     text-align: left;
     margin-left: 0vw;
+    font-size: 1.25rem;
   }
   button:hover {
     background-color: rgba(255, 255, 255, 0.25);
@@ -1055,7 +1056,7 @@ button:focus {
         grid-template-columns: 1.75fr .75fr;
     -ms-grid-rows: 1fr 1fr;
         grid-template-rows: 1fr 1fr;
-        grid-template-areas: "planet info" "planet buttons";
+        grid-template-areas: "planet info" "planet buttons";
     margin: 5rem 6rem 0;
   }
   .planet_main h1 {
@@ -1096,11 +1097,14 @@ button:focus {
     margin: .5;
     text-align: left;
     max-width: 100%;
+    font-size: 1.5rem;
+    line-height: 2.5rem;
   }
   .source {
     opacity: .5;
     padding-top: 2.5rem;
     margin-bottom: 0;
+    font-size: 1.5rem;
   }
   .source a {
     color: inherit;
@@ -1113,35 +1117,35 @@ button:focus {
     margin: 0;
   }
   .planet .mercury {
-    width: 11.93rem;
+    width: 15.93rem;
     margin-bottom: 3rem;
   }
   .planet .venus {
-    width: 14.625rem;
+    width: 19.625rem;
     margin-bottom: 3rem;
   }
   .planet .earth {
-    width: 15.81rem;
+    width: 19.81rem;
     margin-bottom: 3rem;
   }
   .planet .mars {
-    width: 13.06rem;
+    width: 17.06rem;
     margin-bottom: 3rem;
   }
   .planet .jupiter {
-    width: 19rem;
+    width: 23rem;
     margin-bottom: 3rem;
   }
   .planet .saturn {
-    width: 20rem;
+    width: 24rem;
     margin-bottom: 3rem;
   }
   .planet .uranus {
-    width: 16rem;
+    width: 20rem;
     margin-bottom: 3rem;
   }
   .planet .neptune {
-    width: 15.81rem;
+    width: 19.81rem;
     margin-bottom: 3rem;
   }
   .planet_details {
@@ -1164,10 +1168,11 @@ button:focus {
   }
   .planet_details h4 {
     opacity: 50%;
+    font-size: 1rem;
   }
   .planet_details h3 {
     font-size: 2rem;
-    padding-top: .75rem;
+    padding-top: 1rem;
   }
   .planet_details .planet_details_sub {
     display: -webkit-box;
