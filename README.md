@@ -6,7 +6,7 @@
 - [What was provided](#what-was-provided)
 - [Building the project](#building-the-project)
 - [Personal Challenge](#personal-challenge)
-- [A few things I'm proud of](#a-few-things-im-proud-of:)
+- [A few things I'm proud of:](#a-few-things-i'm-proud-of:)
 
 
 ![Design preview for the Planets fact site coding challenge](./preview.jpg)
