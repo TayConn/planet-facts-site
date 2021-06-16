@@ -50,7 +50,7 @@ body {
   background-color: #070724;
   background-image: url(/starter-code/assets/background-stars.svg);
   background-position: center;
-  background-repeat: no-repeat;
+  background-repeat: repeat;
 }
 
 body h1 {
