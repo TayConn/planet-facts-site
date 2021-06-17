@@ -5,59 +5,137 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Antonio&family=Spartan:wght@400;700&display=swap" rel="stylesheet"> 
+  <link rel="stylesheet" href="/starter-code/CSS/style.css"> 
+  <script src="https://kit.fontawesome.com/f6ba9ab941.js" crossorigin="anonymous"></script>
   
-  <title>Frontend Mentor | Planets fact site</title>
+  <title>Planets fact site | Venus</title>
 </head>
 <body>
-  Mars
+  <nav role="navigation">
+    <div class="nav_top">
+      <div class="nav_inner_wrapper">
+        <h2>The Planets</h2>
+        <button aria-label="mobile-menu" class="hamburger" id="hamburger"><i id="icon" class="fas fa-bars"></i></button>
+      </div>
+    </div>
+    <ul id="nav_menu" class="nav_menu">
+      <li>
+        <a href="./index.html">
+        <div class="menu_item">
+          <div class="planet_menu_group">
+            <div class="circle mercury-color"></div>
+            <p>Mercury</p>
+          </div>
+          <i class="fas fa-angle-right"></i>
+        </div>
+      </a></li>
+      <div class="list_break"></div>
+      <li><a href="./venus.html">
+        <div class="menu_item">
+          <div class="planet_menu_group">
+            <div class="circle venus-color"></div>
+            <p>Venus</p>
+          </div>
+          <i class="fas fa-angle-right"></i>
+        </div>
+      </a></li>
+      <div class="list_break"></div>
+      <li><a href="./earth.html">
+        <div class="menu_item">
+          <div class="planet_menu_group">
+            <div class="circle earth-color"></div>
+            <p>Earth</p>
+          </div>
+          <i class="fas fa-angle-right"></i>
+        </div>
+      </a></li>
+      <div class="list_break"></div>
+      <li><a href="./mars.html">
+        <div class="menu_item">
+          <div class="planet_menu_group">
+            <div class="circle mars-color"></div>
+            <p>Mars</p>
+          </div>
+          <i class="fas fa-angle-right"></i>
+        </div>
+      </a></li>
+      <div class="list_break"></div>
+      <li><a href="./jupiter.html">
+        <div class="menu_item">
+          <div class="planet_menu_group">
+            <div class="circle jupiter-color"></div>
+            <p>Jupiter</p>
+          </div>
+          <i class="fas fa-angle-right"></i>
+        </div>
+      </a></li>
+      <div class="list_break"></div>
+      <li><a href="./saturn.html">
+        <div class="menu_item">
+          <div class="planet_menu_group">
+            <div class="circle saturn-color"></div>
+            <p>Saturn</p>
+          </div>
+          <i class="fas fa-angle-right"></i>
+        </div>
+      </a></li>
+      <div class="list_break"></div>
+      <li><a href="./uranus.html">
+        <div class="menu_item">
+          <div class="planet_menu_group">
+            <div class="circle uranus-color"></div>
+            <p>Uranus</p>
+          </div>
+          <i class="fas fa-angle-right"></i>
+        </div>
+      </a></li>
+      <div class="list_break"></div>
+      <li><a href="./neptune.html">
+        <div class="menu_item">
+          <div class="planet_menu_group">
+            <div class="circle neptune-color"></div>
+            <p>Neptune</p>
+          </div>
+          <i class="fas fa-angle-right"></i>
+        </div>
+      </a></li>
+    </ul>
+  </nav>
 
-  <!-- Overview Content Start -->
+  <main id="3" class="planet_main planet_highlights">
 
-  Mars is the fourth planet from the Sun and the second-smallest planet 
-  in the Solar System, being larger than only Mercury. In English, Mars 
-  carries the name of the Roman god of war and is often referred to as 
-  the "Red Planet".
+    <div class="tabs planet_buttons_wrapper item-buttons">
+      <div role="tablist" aria-label="Planet Information" class="planet_details_buttons">
+        <button role="tab" id="overview_tab" aria-selected="true"><span class="number_opacity">01</span>Overview</button>
+        <button role="tab" id="structure_tab" aria-selected="false"><span class="number_opacity">02</span><span class="tab_desk_vis">Internal </span>Structure</button>
+        <button role="tab" id="surface_tab"
+        aria-selected="false"><span class="number_opacity">03</span>Surface<span class="tab_desk_vis"> Geology</span></button>
+      </div>
+    </div>
 
-  Source : Wikipedia <!-- URL: https://en.wikipedia.org/wiki/Mars -->
+    <div id="overview-img" class="overview item-image" role="tabpanel" aria-labelledby="overview_tab" >
+    </div>
 
-  <!-- Overview Content End -->
+    <div id="overview" class="overview item-info" role="tabpanel" aria-labelledby="overview_tab" >
+      </div>
 
-  <!-- Internal Structure Content Start -->
+    <div id="structure-img" class="structure item-image" role="tabpanel" aria-labelledby="structure_tab" hidden>
+    </div>
 
-  Like Earth, Mars has differentiated into a dense metallic core overlaid 
-  by less dense materials. Scientists initially determined that the core 
-  is at least partially liquid. Current models of its interior imply a 
-  core consisting primarily of iron and nickel with about 16–17% sulfur.
+    <div id="structure" class="structure item-info" role="tabpanel" aria-labelledby="structure_tab" hidden>
+    </div>
 
-  Source : Wikipedia <!-- URL: https://en.wikipedia.org/wiki/Mars#Internal_structure -->
+    <div id="geology-img" class="geology item-image" role="tabpanel" aria-labelledby="surface_tab" hidden>
+    </div>
 
-  <!-- Internal Structure Content End -->
+    <div id="geology" class="geology item-info" role="tabpanel" aria-labelledby="surface_tab" hidden>
+    </div>
 
-  <!-- Surface Geology Content Start -->
-
-  Mars is a terrestrial planet whose surface consists of minerals containing 
-  silicon and oxygen, metals, and other elements that typically make up rock. 
-  The surface is primarily composed of tholeiitic basalt, although parts are 
-  more silica-rich than typical basalt.
-
-  Source : Wikipedia <!-- URL: https://en.wikipedia.org/wiki/Mars#Surface_geology -->
-
-  <!-- Surface Geology Content End -->
-
-  01 Overview
-  02 Internal Structure
-  03 Surface Geology
-
-  Rotation Time
-  1.03 Days
-
-  Revolution Time
-  1.88 Years
-
-  Radius
-  3,389.5 KM
-
-  Average Temp.
-  -28°c
+  </main>
+  <aside id="metaData" class="planet_details">
+  </aside>
+  <script src="/starter-code/script.js"></script>
 </body>
 </html>

@@ -5,59 +5,137 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Antonio&family=Spartan:wght@400;700&display=swap" rel="stylesheet"> 
+  <link rel="stylesheet" href="/starter-code/CSS/style.css"> 
+  <script src="https://kit.fontawesome.com/f6ba9ab941.js" crossorigin="anonymous"></script>
   
-  <title>Frontend Mentor | Planets fact site</title>
+  <title>Planets fact site | Venus</title>
 </head>
 <body>
-  Saturn
+  <nav role="navigation">
+    <div class="nav_top">
+      <div class="nav_inner_wrapper">
+        <h2>The Planets</h2>
+        <button aria-label="mobile-menu" class="hamburger" id="hamburger"><i id="icon" class="fas fa-bars"></i></button>
+      </div>
+    </div>
+    <ul id="nav_menu" class="nav_menu">
+      <li>
+        <a href="./index.html">
+        <div class="menu_item">
+          <div class="planet_menu_group">
+            <div class="circle mercury-color"></div>
+            <p>Mercury</p>
+          </div>
+          <i class="fas fa-angle-right"></i>
+        </div>
+      </a></li>
+      <div class="list_break"></div>
+      <li><a href="./venus.html">
+        <div class="menu_item">
+          <div class="planet_menu_group">
+            <div class="circle venus-color"></div>
+            <p>Venus</p>
+          </div>
+          <i class="fas fa-angle-right"></i>
+        </div>
+      </a></li>
+      <div class="list_break"></div>
+      <li><a href="./earth.html">
+        <div class="menu_item">
+          <div class="planet_menu_group">
+            <div class="circle earth-color"></div>
+            <p>Earth</p>
+          </div>
+          <i class="fas fa-angle-right"></i>
+        </div>
+      </a></li>
+      <div class="list_break"></div>
+      <li><a href="./mars.html">
+        <div class="menu_item">
+          <div class="planet_menu_group">
+            <div class="circle mars-color"></div>
+            <p>Mars</p>
+          </div>
+          <i class="fas fa-angle-right"></i>
+        </div>
+      </a></li>
+      <div class="list_break"></div>
+      <li><a href="./jupiter.html">
+        <div class="menu_item">
+          <div class="planet_menu_group">
+            <div class="circle jupiter-color"></div>
+            <p>Jupiter</p>
+          </div>
+          <i class="fas fa-angle-right"></i>
+        </div>
+      </a></li>
+      <div class="list_break"></div>
+      <li><a href="./saturn.html">
+        <div class="menu_item">
+          <div class="planet_menu_group">
+            <div class="circle saturn-color"></div>
+            <p>Saturn</p>
+          </div>
+          <i class="fas fa-angle-right"></i>
+        </div>
+      </a></li>
+      <div class="list_break"></div>
+      <li><a href="./uranus.html">
+        <div class="menu_item">
+          <div class="planet_menu_group">
+            <div class="circle uranus-color"></div>
+            <p>Uranus</p>
+          </div>
+          <i class="fas fa-angle-right"></i>
+        </div>
+      </a></li>
+      <div class="list_break"></div>
+      <li><a href="./neptune.html">
+        <div class="menu_item">
+          <div class="planet_menu_group">
+            <div class="circle neptune-color"></div>
+            <p>Neptune</p>
+          </div>
+          <i class="fas fa-angle-right"></i>
+        </div>
+      </a></li>
+    </ul>
+  </nav>
 
-  <!-- Overview Content Start -->
+  <main id="5" class="planet_main planet_highlights">
 
-  Saturn is the sixth planet from the Sun and the second-largest in the Solar 
-  System, after Jupiter. It is a gas giant with an average radius of about 
-  nine and a half times that of Earth. It only has one-eighth the average 
-  density of Earth.
+    <div class="tabs planet_buttons_wrapper item-buttons">
+      <div role="tablist" aria-label="Planet Information" class="planet_details_buttons">
+        <button role="tab" id="overview_tab" aria-selected="true"><span class="number_opacity">01</span>Overview</button>
+        <button role="tab" id="structure_tab" aria-selected="false"><span class="number_opacity">02</span><span class="tab_desk_vis">Internal </span>Structure</button>
+        <button role="tab" id="surface_tab"
+        aria-selected="false"><span class="number_opacity">03</span>Surface<span class="tab_desk_vis"> Geology</span></button>
+      </div>
+    </div>
 
-  Source : Wikipedia <!-- URL: https://en.wikipedia.org/wiki/Saturn -->
+    <div id="overview-img" class="overview item-image" role="tabpanel" aria-labelledby="overview_tab" >
+    </div>
 
-  <!-- Overview Content End -->
+    <div id="overview" class="overview item-info" role="tabpanel" aria-labelledby="overview_tab" >
+      </div>
 
-  <!-- Internal Structure Content Start -->
+    <div id="structure-img" class="structure item-image" role="tabpanel" aria-labelledby="structure_tab" hidden>
+    </div>
 
-  Despite consisting mostly of hydrogen and helium, most of Saturn's mass 
-  is not in the gas phase, because hydrogen becomes a non-ideal liquid 
-  when the density is above 0.01 g/cm3, which is reached at a radius 
-  containing 99.9% of Saturn's mass.
+    <div id="structure" class="structure item-info" role="tabpanel" aria-labelledby="structure_tab" hidden>
+    </div>
 
-  Source : Wikipedia <!-- URL: https://en.wikipedia.org/wiki/Saturn#Internal_structure -->
+    <div id="geology-img" class="geology item-image" role="tabpanel" aria-labelledby="surface_tab" hidden>
+    </div>
 
-  <!-- Internal Structure Content End -->
+    <div id="geology" class="geology item-info" role="tabpanel" aria-labelledby="surface_tab" hidden>
+    </div>
 
-  <!-- Surface Geology Content Start -->
-
-  The outer atmosphere of Saturn contains 96.3% molecular hydrogen and 3.25% 
-  helium by volume. The planet's most famous feature is its prominent ring 
-  system, which is composed mostly of ice particles with a smaller amount 
-  of rocky debris and dust. 
-
-  Source : Wikipedia <!-- URL: https://en.wikipedia.org/wiki/Saturn#Atmosphere -->
-
-  <!-- Surface Geology Content End -->
-
-  01 Overview
-  02 Internal Structure
-  03 Surface Geology
-
-  Rotation Time
-  10.8 Hours
-
-  Revolution Time
-  29.46 Years
-
-  Radius
-  58,232 KM
-
-  Average Temp.
-  -138°c
+  </main>
+  <aside id="metaData" class="planet_details">
+  </aside>
+  <script src="/starter-code/script.js"></script>
 </body>
 </html>

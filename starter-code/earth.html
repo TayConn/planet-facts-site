@@ -5,59 +5,137 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Antonio&family=Spartan:wght@400;700&display=swap" rel="stylesheet"> 
+  <link rel="stylesheet" href="/starter-code/CSS/style.css"> 
+  <script src="https://kit.fontawesome.com/f6ba9ab941.js" crossorigin="anonymous"></script>
   
-  <title>Frontend Mentor | Planets fact site</title>
+  <title>Planets fact site | Venus</title>
 </head>
 <body>
-  Earth
+  <nav role="navigation">
+    <div class="nav_top">
+      <div class="nav_inner_wrapper">
+        <h2>The Planets</h2>
+        <button aria-label="mobile-menu" class="hamburger" id="hamburger"><i id="icon" class="fas fa-bars"></i></button>
+      </div>
+    </div>
+    <ul id="nav_menu" class="nav_menu">
+      <li>
+        <a href="./index.html">
+        <div class="menu_item">
+          <div class="planet_menu_group">
+            <div class="circle mercury-color"></div>
+            <p>Mercury</p>
+          </div>
+          <i class="fas fa-angle-right"></i>
+        </div>
+      </a></li>
+      <div class="list_break"></div>
+      <li><a href="./venus.html">
+        <div class="menu_item">
+          <div class="planet_menu_group">
+            <div class="circle venus-color"></div>
+            <p>Venus</p>
+          </div>
+          <i class="fas fa-angle-right"></i>
+        </div>
+      </a></li>
+      <div class="list_break"></div>
+      <li><a href="./earth.html">
+        <div class="menu_item">
+          <div class="planet_menu_group">
+            <div class="circle earth-color"></div>
+            <p>Earth</p>
+          </div>
+          <i class="fas fa-angle-right"></i>
+        </div>
+      </a></li>
+      <div class="list_break"></div>
+      <li><a href="./mars.html">
+        <div class="menu_item">
+          <div class="planet_menu_group">
+            <div class="circle mars-color"></div>
+            <p>Mars</p>
+          </div>
+          <i class="fas fa-angle-right"></i>
+        </div>
+      </a></li>
+      <div class="list_break"></div>
+      <li><a href="./jupiter.html">
+        <div class="menu_item">
+          <div class="planet_menu_group">
+            <div class="circle jupiter-color"></div>
+            <p>Jupiter</p>
+          </div>
+          <i class="fas fa-angle-right"></i>
+        </div>
+      </a></li>
+      <div class="list_break"></div>
+      <li><a href="./saturn.html">
+        <div class="menu_item">
+          <div class="planet_menu_group">
+            <div class="circle saturn-color"></div>
+            <p>Saturn</p>
+          </div>
+          <i class="fas fa-angle-right"></i>
+        </div>
+      </a></li>
+      <div class="list_break"></div>
+      <li><a href="./uranus.html">
+        <div class="menu_item">
+          <div class="planet_menu_group">
+            <div class="circle uranus-color"></div>
+            <p>Uranus</p>
+          </div>
+          <i class="fas fa-angle-right"></i>
+        </div>
+      </a></li>
+      <div class="list_break"></div>
+      <li><a href="./neptune.html">
+        <div class="menu_item">
+          <div class="planet_menu_group">
+            <div class="circle neptune-color"></div>
+            <p>Neptune</p>
+          </div>
+          <i class="fas fa-angle-right"></i>
+        </div>
+      </a></li>
+    </ul>
+  </nav>
 
-  <!-- Overview Content Start -->
+  <main id="2" class="planet_main planet_highlights">
 
-  Third planet from the Sun and the only known planet to harbor life. 
-  About 29.2% of Earth's surface is land with remaining 70.8% is 
-  covered with water. Earth's distance from the Sun, physical properties 
-  and geological history have allowed life to evolve and thrive.
+    <div class="tabs planet_buttons_wrapper item-buttons">
+      <div role="tablist" aria-label="Planet Information" class="planet_details_buttons">
+        <button role="tab" id="overview_tab" aria-selected="true"><span class="number_opacity">01</span>Overview</button>
+        <button role="tab" id="structure_tab" aria-selected="false"><span class="number_opacity">02</span><span class="tab_desk_vis">Internal </span>Structure</button>
+        <button role="tab" id="surface_tab"
+        aria-selected="false"><span class="number_opacity">03</span>Surface<span class="tab_desk_vis"> Geology</span></button>
+      </div>
+    </div>
 
-  Source : Wikipedia <!-- URL: https://en.wikipedia.org/wiki/Earth -->
+    <div id="overview-img" class="overview item-image" role="tabpanel" aria-labelledby="overview_tab" >
+    </div>
 
-  <!-- Overview Content End -->
+    <div id="overview" class="overview item-info" role="tabpanel" aria-labelledby="overview_tab" >
+      </div>
 
-  <!-- Internal Structure Content Start -->
+    <div id="structure-img" class="structure item-image" role="tabpanel" aria-labelledby="structure_tab" hidden>
+    </div>
 
-  Earth's interior, like that of the other terrestrial planets, is divided 
-  into layers by their chemical or physical (rheological) properties. The 
-  outer layer is a chemically distinct silicate solid crust, which is 
-  underlain by a highly viscous solid mantle.
+    <div id="structure" class="structure item-info" role="tabpanel" aria-labelledby="structure_tab" hidden>
+    </div>
 
-  Source : Wikipedia <!-- URL: https://en.wikipedia.org/wiki/Earth#Internal_structure -->
+    <div id="geology-img" class="geology item-image" role="tabpanel" aria-labelledby="surface_tab" hidden>
+    </div>
 
-  <!-- Internal Structure Content End -->
+    <div id="geology" class="geology item-info" role="tabpanel" aria-labelledby="surface_tab" hidden>
+    </div>
 
-  <!-- Surface Geology Content Start -->
-
-  The total surface area of Earth is about 510 million km2. The continental 
-  crust consists of lower density material such as the igneous rocks granite 
-  and andesite. Less common is basalt, a denser volcanic rock that is the 
-  primary constituent of the ocean floors.
-
-  Source : Wikipedia <!-- URL: https://en.wikipedia.org/wiki/Earth#Surface -->
-
-  <!-- Surface Geology Content End -->
-
-  01 Overview
-  02 Internal Structure
-  03 Surface Geology
-
-  Rotation Time
-  0.99 Days
-
-  Revolution Time
-  365.26 Days
-
-  Radius
-  6,371 KM
-
-  Average Temp.
-  16°c
+  </main>
+  <aside id="metaData" class="planet_details">
+  </aside>
+  <script src="/starter-code/script.js"></script>
 </body>
 </html>
