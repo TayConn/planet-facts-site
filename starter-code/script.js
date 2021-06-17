@@ -12,37 +12,44 @@ hamburger.addEventListener('click', () => {
     icon.classList.toggle('fa-bars');
 });
 
+//**--NASA picture of the day API integration! --**//
 
-//**--TAB SWITCHING LOGIC--**//
-const tabs = document.querySelector('.tabs');
-const tabButtons = tabs.querySelectorAll('[role="tab"]');
-const tabPanels = Array.from(document.querySelectorAll('[role="tabpanel"]'));
+const url = 'https://api.nasa.gov/planetary/apod?api_key='
+const api_key = config.NASA_API_KEY
 
-function handleTabClick(event) {
-  // hide all tab panels
-  tabPanels.forEach(panel => {
-    panel.hidden = true;
-  });
-  // mark all tabs as unselected
-  tabButtons.forEach(tab => {
-    tab.setAttribute('aria-selected', false);
-  });
-  // mark the clicked tab as selected
-  event.currentTarget.setAttribute('aria-selected', true);
-  
-  // find the associated tabPanel and show it!
-  const { id } = event.currentTarget;
-  //Find in the array of tabPanels
-  const tabPanel = tabPanels.filter(
-    panel => panel.getAttribute('aria-labelledby') === id
-  );
-  //make each tab pannel that is hidden equal false
-  tabPanel.forEach(panel => {
-    panel.hidden = false;
-  });
+
+const fetchNASAapi = async () =>{
+    try{
+        //create fetch for api using template literals calling from the defined variables above
+        const response = await fetch(`${url}${api_key}`);
+            //use .json() to parse JSON data
+            const data = await response.json();
+            console.log('NASA APOD data', data);
+            displayData(data);
+             //handle any errors - catches
+         } catch (error){
+                console.log(error);
+            }
+    }
+    fetchNASAapi();
+
+const displayData = data => {
+    document.getElementById('title_POTD').textContent = data.title;
+    document.getElementById('date_POTD').textContent = data.date;
+    document.getElementById('explanation_POTD').textContent = data.explanation;
+    document.getElementById('picture_POTD').src = data.hdurl;
 }
-//listen to the button and for each click execute the handleTabClick function
-tabButtons.forEach(button => button.addEventListener('click', handleTabClick));
+
+const nasaButton = document.getElementById('Nasa_button');
+const picture_desc = document.getElementById('explanation_POTD');
+// function showAll() {
+//     picture_desc.classList.add('button_show');
+// }
+nasaButton.addEventListener('click', () => {
+    picture_desc.classList.toggle('button_show');
+});
+
+
 
 
  //**--FETCH ARRAYS FROM JSON--**//
@@ -271,3 +278,75 @@ function appendAllData(data){
                 // appends div to parent element
                 metaDataContainer.appendChild(temp); 
 }
+
+
+
+//**--TAB SWITCHING LOGIC--**//
+const tabs = document.querySelector('.tabs');
+const tabButtons = tabs.querySelectorAll('[role="tab"]');
+const tabPanels = Array.from(document.querySelectorAll('[role="tabpanel"]'));
+
+function handleTabClick(event) {
+  // hide all tab panels
+  tabPanels.forEach(panel => {
+    panel.hidden = true;
+  });
+  // mark all tabs as unselected
+  tabButtons.forEach(tab => {
+    tab.setAttribute('aria-selected', false);
+  });
+  // mark the clicked tab as selected
+  event.currentTarget.setAttribute('aria-selected', true);
+  
+  // find the associated tabPanel and show it!
+  const { id } = event.currentTarget;
+  //Find in the array of tabPanels
+  const tabPanel = tabPanels.filter(
+    panel => panel.getAttribute('aria-labelledby') === id
+  );
+  //make each tab pannel that is hidden equal false
+  tabPanel.forEach(panel => {
+    panel.hidden = false;
+  });
+}
+
+//listen to the button and for each click execute the handleTabClick function
+tabButtons.forEach(button => button.addEventListener('click', handleTabClick));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// const aria_true_button = document.querySelector('[aria-selected = "true"]');
+// aria_true_button.classList.add(`buttonSelected_`+`${planetSelected}`);
+
+
+
+// // const listMain = document.querySelector('.nav_menu');
+// const listHoverColor = document.querySelectorAll('.list_item');
+
+
+// function addHover(e) {
+//         e.target.classList.add('list_hover_'+`${planetSelected}`);
+        
+//     }
+
+// listHoverColor.forEach(listItem => listItem.addEventListener(`mouseover`, addHover));
+// // listHoverColor.forEach(listItem => listItem.addEventListener(`focus`, addHover));

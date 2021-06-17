@@ -21,7 +21,7 @@
       </div>
     </div>
     <ul id="nav_menu" class="nav_menu">
-      <li>
+      <li class="list_item">
         <a href="./index.html">
         <div class="menu_item">
           <div class="planet_menu_group">
@@ -32,7 +32,7 @@
         </div>
       </a></li>
       <div class="list_break"></div>
-      <li><a href="./venus.html">
+      <li class="list_item"><a href="./venus.html">
         <div class="menu_item">
           <div class="planet_menu_group">
             <div class="circle venus-color"></div>
@@ -42,7 +42,7 @@
         </div>
       </a></li>
       <div class="list_break"></div>
-      <li><a href="./earth.html">
+      <li class="list_item"><a href="./earth.html">
         <div class="menu_item">
           <div class="planet_menu_group">
             <div class="circle earth-color"></div>
@@ -52,7 +52,7 @@
         </div>
       </a></li>
       <div class="list_break"></div>
-      <li><a href="./mars.html">
+      <li class="list_item"><a href="./mars.html">
         <div class="menu_item">
           <div class="planet_menu_group">
             <div class="circle mars-color"></div>
@@ -62,7 +62,7 @@
         </div>
       </a></li>
       <div class="list_break"></div>
-      <li><a href="./jupiter.html">
+      <li class="list_item"><a href="./jupiter.html">
         <div class="menu_item">
           <div class="planet_menu_group">
             <div class="circle jupiter-color"></div>
@@ -72,7 +72,7 @@
         </div>
       </a></li>
       <div class="list_break"></div>
-      <li><a href="./saturn.html">
+      <li class="list_item"><a href="./saturn.html">
         <div class="menu_item">
           <div class="planet_menu_group">
             <div class="circle saturn-color"></div>
@@ -82,7 +82,7 @@
         </div>
       </a></li>
       <div class="list_break"></div>
-      <li><a href="./uranus.html">
+      <li class="list_item"><a href="./uranus.html">
         <div class="menu_item">
           <div class="planet_menu_group">
             <div class="circle uranus-color"></div>
@@ -92,7 +92,7 @@
         </div>
       </a></li>
       <div class="list_break"></div>
-      <li><a href="./neptune.html">
+      <li class="list_item"><a href="./neptune.html">
         <div class="menu_item">
           <div class="planet_menu_group">
             <div class="circle neptune-color"></div>
@@ -132,10 +132,22 @@
 
     <div id="geology" class="geology item-info" role="tabpanel" aria-labelledby="surface_tab" hidden>
     </div>
-
   </main>
   <aside id="metaData" class="planet_details">
   </aside>
+  <aside class="nasa_wrapper" id="NasaPOTD">
+    <div class="nasa_overview_wrapper">
+      <h2>NASA's Astronomy Picture of the Day</h2>
+      <h3 id="title_POTD"></h3>
+      <p id="date_POTD"></p>
+    </div>
+    <div class="nasa_pic_details_wrapper">
+      <img src="" id="picture_POTD" alt="Astronomy picture from NASA">
+      <button id="Nasa_button">Learn More <i class="fas fa-angle-right"></i></button>
+      <p id="explanation_POTD"></p>
+    </div>
+  </aside>
+  <script type="text/javascript" src="config.js"></script>
   <script src="/starter-code/script.js"></script>
 </body>
 </html>
