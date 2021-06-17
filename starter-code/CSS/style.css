@@ -706,7 +706,7 @@ button:focus {
         grid-template-columns: 1fr 1fr;
     -ms-grid-rows: 1fr 1fr;
         grid-template-rows: 1fr 1fr;
-        grid-template-areas: "planet planet" "info buttons";
+        grid-template-areas: "planet planet" "info buttons";
     margin: 0 2rem;
   }
   .planet_main h1 {
@@ -887,7 +887,7 @@ button:focus {
         -ms-flex-align: center;
             align-items: center;
     gap: 1rem;
-    width: 40%;
+    width: 80%;
     margin: 0 1.5rem 1rem;
     padding: 0;
   }
@@ -1056,7 +1056,7 @@ button:focus {
         grid-template-columns: 1.75fr .75fr;
     -ms-grid-rows: 1fr 1fr;
         grid-template-rows: 1fr 1fr;
-        grid-template-areas: "planet info" "planet buttons";
+        grid-template-areas: "planet info" "planet buttons";
     margin: 5rem 6rem 0;
   }
   .planet_main h1 {
