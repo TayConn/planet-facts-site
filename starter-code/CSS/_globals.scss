@@ -14,6 +14,8 @@ $color_orange: #CD5120;
 $color_greenBlue:  #1ec2a4;
 $color_blueBright: #2d68f0;
 
+
+
 //planet name colors//
 .mercury-color{
     background-color: #DEF4FC;
@@ -117,6 +119,8 @@ body{
         text-transform: uppercase;
     }
 //**--End globals--**//
+
+
 }
 //navigation menu//
     nav{
@@ -261,7 +265,53 @@ body{
     .tab_desk_vis{
         display: none;
     }
+//determines size and margin of planet images
+.item-image{
 
+    .planet{
+        margin: 2rem 0 1.5rem 0;
+    }
+    .Mercury{
+        width: 7.93rem;
+        margin-top: 3rem;
+        margin-bottom: 3rem;
+    }
+    .Venus{
+        width: 18.625rem;
+        margin-top: 3rem;
+        margin-bottom: 3rem;
+    }
+    .Earth{
+        width: 14.81rem;
+        margin-top: 3rem;
+        margin-bottom: 3rem;
+    }
+    .Mars{
+        width: 9rem;
+        margin-top: 3rem;
+        margin-bottom: 3rem;
+    }
+    .Jupiter{
+        width: 15rem;
+        margin-top: 3rem;
+        margin-bottom: 3rem;
+    }
+    .Saturn{
+        width: 17rem;
+        margin-top: 3rem;
+        margin-bottom: 3rem;
+    }
+    .Uranus{
+        width: 15rem;
+        margin-top: 3rem;
+        margin-bottom: 3rem;
+    }
+    .Neptune{
+        width: 15.81rem;
+        margin-top: 3rem;
+        margin-bottom: 3rem;
+    }
+}
 //planet details tabs/buttons//
     .planet_detailsMenu{
         display: flex;
@@ -286,43 +336,7 @@ body{
             margin: .5rem 0;
         }
     }
-//determines size and margin of planet images
-    .planet{
-        margin: 2rem 0 1.5rem 0;
 
-        .mercury{
-            width: 7.93rem;
-            margin-bottom: 3rem;
-        }
-        .venus{
-            width: 10.625rem;
-            margin-bottom: 3rem;
-        }
-        .earth{
-            width: 11.81rem;
-            margin-bottom: 3rem;
-        }
-        .mars{
-            width: 9.06rem;
-            margin-bottom: 3rem;
-        }
-        .jupiter{
-            width: 15rem;
-            margin-bottom: 3rem;
-        }
-        .saturn{
-            width: 17rem;
-            margin-bottom: 3rem;
-        }
-        .uranus{
-            width: 12rem;
-            margin-bottom: 3rem;
-        }
-        .neptune{
-            width: 11.81rem;
-            margin-bottom: 3rem;
-        }
-    }
 //Main Details section//
     .planet_highlights{
         display: flex;
@@ -410,10 +424,11 @@ nav{
         flex-flow: row wrap;
         justify-content: center;
         align-items: center;
-        gap: 1rem;
+        gap: .5rem;
         width: 100%;
         margin: 1rem;
-        padding: 0;
+        padding: 1rem 0 0;
+        border-top: 1.5px rgba(255,255,255,.15);
         .menu_item{
             display: flex;
             flex-flow: row nowrap;
@@ -425,7 +440,7 @@ nav{
                 display: none;
             }
             p{
-                font-size: 1rem;
+                font-size: 1.15rem;
             }
             
         }
@@ -466,8 +481,7 @@ nav{
 }
 //Tab buttons Section
 .planet_buttons_wrapper{
-    // border-top: 1.5px solid rgba(255,255,255,.25);
-    // border-bottom: 1.5px solid rgba(255,255,255,.25);
+  
     width: 40vw;
     margin: 1.5rem;
     order: 2;
@@ -475,12 +489,7 @@ nav{
 }
 
 .planet_details_buttons{
-    // display: flex;
-    // flex-flow: row nowrap;
-    // justify-content: space-around;
-    // align-items: center;
-    // gap: 1rem;
-    // margin: 0 1rem;
+   
 
     display: flex;
     flex-flow: column nowrap;
@@ -599,36 +608,36 @@ button:focus {
 .planet{
     margin:0;
 
-    .mercury{
-        width: 7.93rem;
+    .Mercury{
+        width: 17.93rem;
         margin-bottom: 3rem;
     }
-    .venus{
-        width: 10.625rem;
+    .Venus{
+        width: 20.625rem;
         margin-bottom: 3rem;
     }
-    .earth{
-        width: 11.81rem;
+    .Earth{
+        width: 21.81rem;
         margin-bottom: 3rem;
     }
-    .mars{
-        width: 9.06rem;
+    .Mars{
+        width: 19.06rem;
         margin-bottom: 3rem;
     }
-    .jupiter{
-        width: 15rem;
+    .Jupiter{
+        width: 25rem;
         margin-bottom: 3rem;
     }
-    .saturn{
-        width: 16rem;
+    .Saturn{
+        width: 26rem;
         margin-bottom: 3rem;
     }
-    .uranus{
-        width: 12rem;
+    .Uranus{
+        width: 22rem;
         margin-bottom: 3rem;
     }
-    .neptune{
-        width: 11.81rem;
+    .Neptune{
+        width: 21.81rem;
         margin-bottom: 3rem;
     }
 }
@@ -694,8 +703,8 @@ button:focus {
     //hide nav menu unless triggered by click in JS//w
         .nav_menu{
             display: flex;
-            flex-flow: row wrap;
-            justify-content: center;
+            flex-flow: row nowrap;
+            justify-content: flex-end;
             align-items: center;
             gap: 1rem;
             width: 80%;
@@ -733,12 +742,12 @@ button:focus {
             li{
                 list-style-type: none;
                 cursor: pointer;
-                border-top: 3px solid transparent;
+                border-top: 5px solid transparent;
                 padding-top: 1rem;
             }
             li:hover{
                 // background-color: rgba(255,255,255,.15);
-                border-top: 3px solid $color_aqua;
+                border-top: 5px solid $color_aqua;
                 padding-top: 1rem;
             }
             a{
@@ -831,7 +840,7 @@ button:focus {
     .planet_main{
         display: grid;
         grid-template-columns: 1.75fr .75fr;
-        grid-template-rows: 1fr 1fr;
+        grid-template-rows: 1.25fr 1fr;
         grid-template-areas:
         "planet info"
         "planet buttons";
@@ -891,36 +900,36 @@ button:focus {
     .planet{
         margin:0;
     
-        .mercury{
-            width: 15.93rem;
+        .Mercury{
+            width: 25.93rem;
             margin-bottom: 3rem;
         }
-        .venus{
-            width: 19.625rem;
+        .Venus{
+            width: 29.625rem;
             margin-bottom: 3rem;
         }
-        .earth{
-            width: 19.81rem;
+        .Earth{
+            width: 29.81rem;
             margin-bottom: 3rem;
         }
-        .mars{
-            width: 17.06rem;
+        .Mars{
+            width: 27.06rem;
             margin-bottom: 3rem;
         }
-        .jupiter{
-            width: 23rem;
+        .Jupiter{
+            width: 33rem;
             margin-bottom: 3rem;
         }
-        .saturn{
-            width: 24rem;
+        .Saturn{
+            width: 34rem;
             margin-bottom: 3rem;
         }
-        .uranus{
-            width: 20rem;
+        .Uranus{
+            width: 30rem;
             margin-bottom: 3rem;
         }
-        .neptune{
-            width: 19.81rem;
+        .Neptune{
+            width: 29.81rem;
             margin-bottom: 3rem;
         }
     }
