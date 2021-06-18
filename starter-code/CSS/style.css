@@ -1035,6 +1035,9 @@ button:focus {
     height: auto;
     border-radius: 10px;
   }
+  .nasa_pic_details_wrapper button {
+    max-width: 50vw;
+  }
   .nasa_pic_details_wrapper .button_show {
     display: block;
   }

@@ -807,6 +807,9 @@ button:focus {
         height: auto;
         border-radius: 10px;
     }
+    button{
+        max-width: 50vw;
+    }
     
     .button_show{
         display: block;
