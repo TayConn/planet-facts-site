@@ -26,7 +26,7 @@ const planetJSON = async () => {
 }
 planetJSON();
 
-//  //**--FETCH ARRAYS FROM JSON--**//
+//  //**--Alternative non async FETCH ARRAYS FROM JSON--**//
 //     fetch('data_orig.json')
 //     //the json data will arrive here
 //     .then(function (response){
