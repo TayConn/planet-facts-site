@@ -34,38 +34,49 @@ const fetchNASAapi = async () =>{
     fetchNASAapi();
 
 const displayData = data => {
-    document.getElementById('title_POTD').textContent = data.title;
-    document.getElementById('date_POTD').textContent = data.date;
-    document.getElementById('explanation_POTD').textContent = data.explanation;
+    document.getElementById('title_POTD').textContent = "Title:  "+data.title;
+    document.getElementById('date_POTD').textContent = "Date:  "+data.date;
+    document.getElementById('explanation_POTD').textContent = "Summary:  "+data.explanation;
     document.getElementById('picture_POTD').src = data.hdurl;
 }
 
 const nasaButton = document.getElementById('Nasa_button');
 const picture_desc = document.getElementById('explanation_POTD');
-// function showAll() {
-//     picture_desc.classList.add('button_show');
-// }
+const nasaCloseDesc = document.getElementById('nasa_learnMore');
+
 nasaButton.addEventListener('click', () => {
     picture_desc.classList.toggle('button_show');
+    nasaCloseDesc.classList.toggle('fa-angle-right');
+    nasaCloseDesc.classList.toggle('fa-times-circle');
 });
 
 
+const planetJSON = async () => {
+    try{
+        const response = await fetch('data_orig.json');
+        const data = await response.json();
+        console.log('IT WORKS!');
+        appendAllData(data)
+     }  catch (error){
+        console.log("an error has occured"+error);
+     }
+}
+planetJSON();
 
-
- //**--FETCH ARRAYS FROM JSON--**//
-    fetch('data_orig.json')
-    //the json data will arrive here
-    .then(function (response){
-        return response.json();
-    })
-    //run appendAllData function
-    .then(function (data){ 
-        appendAllData(data);
-    })
-    //displays an error in the console in case something went wrong
-    .catch(function (error) { 
-         console.log(error);
-    });
+//  //**--FETCH ARRAYS FROM JSON--**//
+//     fetch('data_orig.json')
+//     //the json data will arrive here
+//     .then(function (response){
+//         return response.json();
+//     })
+//     //run appendAllData function
+//     .then(function (data){ 
+//         appendAllData(data);
+//     })
+//     //displays an error in the console in case something went wrong
+//     .catch(function (error) { 
+//          console.log(error);
+//     });
 
 //** DATA STRUCTURE FOR .JSON TO HTML **/
 let planetGrabber = document.querySelector('main'); //identifying where planet name will be via class
