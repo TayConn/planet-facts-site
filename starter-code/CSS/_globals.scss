@@ -1146,87 +1146,86 @@ button:focus {
         }
     }
 
-// //NASA API styling//
-    // .nasa_wrapper{
-    //     display: flex;
-    //     flex-flow: row wrap;
-    //     justify-content: center;
-    //     align-items: flex-start;
-    //     gap: 2rem;
-    //     margin: 3rem .5rem 0;
-    //     padding-top: 5rem;
-    //     border-top: 1.5px solid rgba(255,255,255,.5);
-    // }
+//NASA API styling//
+    .nasa_wrapper{
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 2rem;
+        margin: 3rem .5rem 5rem;
+        padding-top: 5rem;
+        border-top: 1.5px solid rgba(255,255,255,.5);
+    }
 
-    // .nasa_overview_wrapper{
-    //     display: flex;
-    //     flex-flow: column nowrap;
-    //     justify-content: flex-start;
-    //     align-items: flex-start;
-    //     gap: .5rem;
-    //     width: 25vw;
-    //     text-align: left;
+    .nasa_overview_wrapper{
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: .5rem;
+        width: 25vw;
+        text-align: left;
 
-    //     h2{
-    //         margin-top: 0;
-    //         margin-bottom: 0;
-    //         max-width: 85%;
-    //         font-size: 4rem;
-    //         line-height: 5rem;
-    //         padding-top: 0;
-    //     }
-    //     p{
-    //         margin: 0;
-    //     }
+        h2{
+            margin-top: 0;
+            margin-bottom: 0;
+            max-width: 85%;
+            font-size: 4rem;
+            line-height: 5rem;
+            padding-top: 0;
+        }
+        p{
+            margin: 0;
+        }
 
-    //     #title_POTD{
-    //         border: 1.5px solid rgba(255,255,255,.5);
-    //         padding: 1rem;
-    //     }
+        #title_POTD{
+            border: 1.5px solid rgba(255,255,255,.5);
+            padding: 1rem;
+        }
 
-    //     button{
-    //         margin-top: 2rem;
-    //         padding: 1rem;
-    //         max-width: 12vw;
-    //         text-transform: inherit;
-    //     }
-    //     button:hover{
-    //         border: 1px solid transparent;
-    //         background-color: $color_aqua;
-    //     }
+        button{
+            margin-top: 2rem;
+            padding: 1rem;
+            max-width: 12vw;
+            text-transform: inherit;
+        }
+        button:hover{
+            border: 1px solid transparent;
+            background-color: $color_aqua;
+        }
 
-    //     i{
-    //         padding-left: 5rem;
-    //     }
-    // }
-    // .nasa_pic_details_wrapper{
-    //     display: flex;
-    //     flex-flow: column nowrap;
-    //     justify-content: center;
-    //     align-items: center;
-    //     gap: 1.5rem;
-    //     margin: 0 .5rem;
-    //     text-align: center;
-    //     width: 55%;
+        i{
+            padding-left: 5rem;
+        }
+    }
+    .nasa_pic_details_wrapper{
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center;
+        gap: 1.5rem;
+        margin: 0 .5rem;
+        text-align: center;
+        width: 55%;
 
-    //     img{
-    //         width: 90%;
-    //         height: auto;
-    //         border-radius: 10px;
-    //     }
-    // }
-    // .nasa_explained{
-    //     width: 100%;
-    //     margin: 2rem 0;
-    //     p{
-    //         display: none;
-    //         font-size: 1.15rem;
-    //         line-height: 2rem;
-    //     }
-    //     .button_show{
-    //         display: block;
-    //     }
+        img{
+            width: 90%;
+            height: auto;
+            border-radius: 10px;
+        }
+    }
+    .nasa_explaned{
+        width: 100%;
+        padding: 1rem 0 2rem;
+        display: none;
+        font-size: 1.15rem;
+        line-height: 2rem;
+       
         
-    // }
+    }
+    .button_show{
+        display: block;
+    }
     
 }

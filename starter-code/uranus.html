@@ -136,7 +136,19 @@
   </main>
   <aside id="metaData" class="planet_details">
   </aside>
-  <script type="text/javascript" src="config.js"></script>
+  <section class="nasa_wrapper" id="NasaPOTD">
+    <div class="nasa_overview_wrapper">
+      <h2>NASA's Astronomy Picture of the Day</h2>
+      <h3 id="title_POTD"></h3>
+      <p id="date_POTD"></p>
+      <button id="Nasa_button">More Information <i id="nasa_learnMore" class="fas fa-angle-right"></i></button>
+        <p class="nasa_explaned" id="explanation_POTD"></p>
+    </div>
+    <div class="nasa_pic_details_wrapper">
+      <img src="" id="picture_POTD" alt="Astronomy picture from NASA">
+    </div>
+</section>
+<script type="text/javascript" src="config.js"></script>
   <script src="/starter-code/script.js"></script>
 </body>
 </html>
