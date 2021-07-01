@@ -1,45 +1,45 @@
 //**--Custom properites--**//
 
 //colors
-$color_darkBlue: #070724; 
-$color_white: #ffffff;
-$color_darkGrey: #38384F;
-$color_lightGrey: #838391;
-$color_aqua: #419EBB;
-$color_mango: #EDA249;
-$color_violet: #6f2ed6;
-$color_redMedium: #D14C32;
-$color_redBright: #D83A34;
-$color_orange: #CD5120;
-$color_greenBlue:  #1ec2a4;
-$color_blueBright: #2d68f0;
+$color_darkBlue: hsl(240, 67%, 8%); 
+$color_white: hsl(0, 0%, 100%);
+$color_darkGrey: hsl(240, 17%, 26%);
+$color_lightGrey: hsl(240, 6%, 54%);
+$color_aqua:hsl(194, 48%, 49%);
+$color_venus: #A34D28;
+$color_earth: hsl(263, 67%, 51%);
+$color_mars: hsl(10, 63%, 51%);
+$color_jupiter: hsl(2, 68%, 53%);
+$color_saturn: hsl(17, 73%, 46%);
+$color_uranus:  hsl(168, 73%, 44%);
+$color_neptune: hsl(222, 87%, 56%);
 
 
 
 //planet name colors//
 .mercury-color{
-    background-color: #DEF4FC;
+    background-color: $color_aqua;
 }
 .venus-color{
-    background-color: #F7CC7F;
+    background-color: $color_venus;
 }
 .earth-color{
-    background-color: #545BFE;
+    background-color: $color_earth;
 }
 .mars-color{
-    background-color: #FF6A45;
+    background-color: $color_mars;
 }
 .jupiter-color{
-    background-color: #ECAD7A;
+    background-color: $color_jupiter;
 }
 .saturn-color{
-    background-color: #FCCB6B;
+    background-color: $color_saturn;
 }
 .uranus-color{
-    background-color: #65F0D5;
+    background-color: $color_uranus;
 }
 .neptune-color{
-    background-color: #2D68F0;
+    background-color: $color_neptune;
 }
 
 .buttonSelected_0{
@@ -47,34 +47,34 @@ $color_blueBright: #2d68f0;
     font-weight: bold;
 }
 .buttonSelected_1{
-    background-color: #F7CC7F;
+    background-color: $color_venus;
     color: #555555;
     font-weight: bold;
 }
 .buttonSelected_2{
-    background-color: $color_violet;
+    background-color: $color_earth;
     font-weight: bold;
 }
 .buttonSelected_3{
-    background-color: #FF6A45;
+    background-color: $color_mars;
     font-weight: bold;
 }
 .buttonSelected_4{
-    background-color: #ECAD7A;
+    background-color: $color_jupiter;
     font-weight: bold;
 }
 .buttonSelected_5{
-    background-color: #FCCB6B;
+    background-color: $color_saturn;
     font-weight: bold;
     color: #555555;
 }
 .buttonSelected_6{
-    background-color: #65F0D5;
+    background-color: $color_uranus;
     font-weight: bold;
     color: #555555;
 }
 .buttonSelected_7{
-    background-color: #2D68F0;
+    background-color: $color_neptune;
     font-weight: bold;
     
 }
@@ -848,6 +848,8 @@ button:focus {
 @media screen and (min-width: 1025px) and (max-width: 3840px){
     //navigation menu//
     
+
+
     nav{
         display: flex;
         flex-flow: row nowrap;
@@ -918,14 +920,36 @@ button:focus {
                 padding-top: 1rem;
                 opacity: .8;
             }
-            
             li:hover {
-                    opacity: 1;
-                    border-top-color: $color_aqua;
-                    padding-top: 1rem;
+                opacity: 1;
+                padding-top: 1rem;
+        }
+
+            [data-name="mercury"]:hover{
+                border-top-color: $color_aqua;
             }
- 
-            
+            [data-name="venus"]:hover{
+                 border-top-color: $color_venus;
+            }
+            [data-name="earth"]:hover{
+                border-top-color: $color_earth;
+           }
+           [data-name="mars"]:hover{
+            border-top-color: $color_mars;
+            }
+            [data-name="jupiter"]:hover{
+                border-top-color: $color_jupiter;
+            }
+            [data-name="saturn"]:hover{
+                border-top-color: $color_saturn;
+            }
+            [data-name="uranus"]:hover{
+                border-top-color:$color_uranus;
+            }
+            [data-name="neptune"]:hover{
+                border-top-color: $color_neptune;
+            }
+
             a{
                 text-decoration: none;
                 color: inherit;
@@ -973,20 +997,60 @@ button:focus {
         margin-left: 0vw;
         font-size: 1.25rem;
     }
-    button:hover{
-        background-color: rgba(255,255,255,.25);
-        padding: 1rem 1.5rem;
-        border: none;
-    }
+
     button[aria-selected="true"] {
         opacity: 1;
-        background-color: $color_aqua;
-        border: none;
+        border: 1px solid transparent;
+        // color: #3f3f3f;
+        // font-weight: bold;
     }
 
     button[aria-selected="false"] {
         opacity: 1;
+        background-color: transparent;
+        color: white;
     }
+
+        [data-name="mercury--btn"]{
+            background-color: $color_aqua;
+            
+        }
+        [data-name="venus--btn"]{
+            background-color: $color_venus;
+            
+        }
+        [data-name="earth--btn"]{
+            background-color: $color_earth;
+           
+       }
+       [data-name="mars--btn"]{
+            background-color: $color_mars;
+            
+        }
+        [data-name="jupiter--btn"]{
+            background-color: $color_jupiter;
+           
+        }
+        [data-name="saturn--btn"]{
+            background-color: $color_saturn;
+            
+        }
+        [data-name="uranus--btn"]{
+            background-color:$color_uranus;
+            
+        }
+        [data-name="neptune--btn"]{
+            background-color: $color_neptune;
+            
+        }
+        
+        button:hover{
+            background-color: rgba(255,255,255,.25);
+            padding: 1rem 1.5rem;
+            border: 1px solid transparent;
+        }
+    
+
     button:focus {
         outline: 0;
         color: $color_white;
@@ -1017,12 +1081,13 @@ button:focus {
     //planet main content
     .planet_main{
         display: grid;
-        grid-template-columns: 1.75fr .75fr;
+        grid-template-columns: 1.5fr 1fr;
         grid-template-rows: 1.25fr 1fr;
         grid-template-areas:
         "planet info"
         "planet buttons";
         margin: 5rem 6rem 0;
+       
         h1{
             margin: .5rem 0;
         }
@@ -1030,7 +1095,9 @@ button:focus {
         .item-image{
             grid-area: planet;
             justify-self: center;
+            align-self: center;
         }
+
         .item-info{
             grid-area: info;
             justify-self: stretch;
@@ -1049,11 +1116,28 @@ button:focus {
             width: 100%;
         }
     }
-    
+    // #geology-img{
+    //     display: grid;
+    //     grid-template-columns: 1fr;
+    //     grid-template-rows: 1fr;
+    //     grid-template-areas:
+    //     "planetStack"
+    // }
+
+    // #geo_stack_back{
+    //     grid-area: planetStack;
+    //     align-self: stretch;
+    //     justify-self: stretch;
+    // }
+    // #geo_stack_front{
+    //     grid-area:planetStack;
+    //     justify-self: center;
+    //     align-self: end;
+    // }
     
     //Main Details section//
     .planet_highlights{
-        margin: .5;
+        margin: .5rem;
         text-align: left;
         max-width: 100%;
         font-size: 1.5rem;
@@ -1076,40 +1160,62 @@ button:focus {
     } 
     //determines size and margin of planet images
     .planet{
-        margin:0;
-    
+
         .Mercury{
             width: 25.93rem;
             margin-bottom: 3rem;
+            z-index: -2;
+            align-self: center;
+            justify-self: center;
+            
         }
         .Venus{
             width: 29.625rem;
             margin-bottom: 3rem;
+            // z-index: -2;
+            // align-self: end;
+            
         }
         .Earth{
             width: 29.81rem;
             margin-bottom: 3rem;
+            z-index: -2;
         }
         .Mars{
             width: 27.06rem;
             margin-bottom: 3rem;
+            z-index: -2;
         }
         .Jupiter{
             width: 33rem;
             margin-bottom: 3rem;
+            z-index: -2;
         }
         .Saturn{
             width: 34rem;
             margin-bottom: 3rem;
+            z-index: -2;
         }
         .Uranus{
             width: 30rem;
             margin-bottom: 3rem;
+            z-index: -2;
         }
         .Neptune{
             width: 29.81rem;
             margin-bottom: 3rem;
+            z-index: -2;
         }
+
+    }
+    .planetGeo__imgSize{
+        margin: 0;
+        padding: 0;
+        width: 14rem;
+        // left: -50%;
+        // bottom: -50%;
+        // z-index: 0;
+        // position: relative;
     }
     
     

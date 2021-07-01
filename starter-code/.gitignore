@@ -16,4 +16,4 @@
 .prettierignore
 
 ### Remove API config key from being seen ##
-##config.js
+config.js

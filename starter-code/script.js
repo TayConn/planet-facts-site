@@ -12,41 +12,41 @@ hamburger.addEventListener('click', () => {
     icon.classList.toggle('fa-bars');
 });
 
-const url = 'https://api.nasa.gov/planetary/apod?api_key=';
-const api_key = config.NASA_API_KEY;
+// const url = 'https://api.nasa.gov/planetary/apod?api_key=';
+// const api_key = config.NASA_API_KEY;
 
 
-const fetchNASAapi = async () =>{
-    try{
-        //create fetch for api using template literals calling from the defined variables above
-        const response = await fetch(`${url}${api_key}`);
-            //use .json() to parse JSON data
-            const data = await response.json();
-            console.log('NASA APOD data', data);
-            displayData(data);
-             //handle any errors - catches
-         } catch (error){
-                console.log(error);
-            }
-    }
-    fetchNASAapi();
+// const fetchNASAapi = async () =>{
+//     try{
+//         //create fetch for api using template literals calling from the defined variables above
+//         const response = await fetch(`${url}${api_key}`);
+//             //use .json() to parse JSON data
+//             const data = await response.json();
+//             console.log('NASA APOD data', data);
+//             displayData(data);
+//              //handle any errors - catches
+//          } catch (error){
+//                 console.log(error);
+//             }
+//     }
+//     fetchNASAapi();
 
-const displayData = data => {
-    document.getElementById('title_POTD').textContent = "Title:  "+data.title;
-    document.getElementById('date_POTD').textContent = "Date:  "+data.date;
-    document.getElementById('explanation_POTD').textContent = "Summary:  "+data.explanation;
-    document.getElementById('picture_POTD').src = data.hdurl;
-}
+// const displayData = data => {
+//     document.getElementById('title_POTD').textContent = "Title:  "+data.title;
+//     document.getElementById('date_POTD').textContent = "Date:  "+data.date;
+//     document.getElementById('explanation_POTD').textContent = "Summary:  "+data.explanation;
+//     document.getElementById('picture_POTD').src = data.hdurl;
+// }
 
-const nasaButton = document.getElementById('Nasa_button');
-const picture_desc = document.getElementById('explanation_POTD');
-const nasaCloseDesc = document.getElementById('nasa_learnMore');
+// const nasaButton = document.getElementById('Nasa_button');
+// const picture_desc = document.getElementById('explanation_POTD');
+// const nasaCloseDesc = document.getElementById('nasa_learnMore');
 
-nasaButton.addEventListener('click', () => {
-    picture_desc.classList.toggle('button_show');
-    nasaCloseDesc.classList.toggle('fa-angle-right');
-    nasaCloseDesc.classList.toggle('fa-times-circle');
-});
+// nasaButton.addEventListener('click', () => {
+//     picture_desc.classList.toggle('button_show');
+//     nasaCloseDesc.classList.toggle('fa-angle-right');
+//     nasaCloseDesc.classList.toggle('fa-times-circle');
+// });
 
 
 const planetJSON = async () => {
@@ -60,21 +60,6 @@ const planetJSON = async () => {
      }
 }
 planetJSON();
-
-//  //**--Alternative non async FETCH ARRAYS FROM JSON--**//
-//     fetch('data_orig.json')
-//     //the json data will arrive here
-//     .then(function (response){
-//         return response.json();
-//     })
-//     //run appendAllData function
-//     .then(function (data){ 
-//         appendAllData(data);
-//     })
-//     //displays an error in the console in case something went wrong
-//     .catch(function (error) { 
-//          console.log(error);
-//     });
 
 //** DATA STRUCTURE FOR .JSON TO HTML **/
 let planetGrabber = document.querySelector('main'); //identifying where planet name will be via class
@@ -194,16 +179,28 @@ function appendAllData(data){
         const geologyImgContainer = document.getElementById('geology-img');
             //adds planet class to overview
             geologyImgContainer.classList.add('planet', 'item-image');
-            //create img variable
+
+            //overview image below
+            const bottomPlanet_image_geology = document.createElement('img');
+            bottomPlanet_image_geology.setAttribute('id','geo_stack_back');
+            bottomPlanet_image_geology.classList.add(data[planetSelected].name);
+            //add source to img
+            bottomPlanet_image_geology.src = data[planetSelected].images.planet;
+            //add alt desc to img
+            bottomPlanet_image_geology.alt = data[planetSelected].overview.alt;
+
+            //create geology img variable
             const planet_image_geology = document.createElement('img');
             //add variable class to image
-            planet_image_geology.classList.add(data[planetSelected].name);
+            planet_image_geology.classList.add('planetGeo__imgSize');
+            planet_image_geology.setAttribute('id', 'geo_stack_front');
             //add source to img
             planet_image_geology.src = data[planetSelected].images.geology;
             //add alt desc to img
             planet_image_geology.alt = data[planetSelected].geology.alt;
 
         //add img to parent div
+        geologyImgContainer.appendChild(bottomPlanet_image_geology);
         geologyImgContainer.appendChild(planet_image_geology);
         
         //identify the container for overview via element ID// 
