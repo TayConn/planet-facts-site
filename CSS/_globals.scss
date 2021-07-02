@@ -1123,10 +1123,12 @@ button:focus {
         h4{
             opacity: 50%;
             font-size: 1rem;
+            white-space: nowrap;
         }
         h3{
             font-size: 2rem;
             padding-top: 1rem;
+            white-space: nowrap;
         }
     
         .planet_details_sub{

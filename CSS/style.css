@@ -1340,10 +1340,12 @@ button:focus {
   .planet_details h4 {
     opacity: 50%;
     font-size: 1rem;
+    white-space: nowrap;
   }
   .planet_details h3 {
     font-size: 2rem;
     padding-top: 1rem;
+    white-space: nowrap;
   }
   .planet_details .planet_details_sub {
     display: -webkit-box;
