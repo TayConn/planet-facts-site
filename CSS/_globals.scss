@@ -1000,9 +1000,15 @@ button:focus {
             justify-self: stretch;
             width: 100%;
             text-align: left;
+            margin-top: 3rem;
 
             h1{
                 padding-bottom: 1rem;
+                font-size: 4rem;
+            }
+            p{
+                font-size: 1.2rem;
+                line-height: 1.75rem;
             }
 
         }
@@ -1017,7 +1023,7 @@ button:focus {
     
     //Main Details section//
     .planet_highlights{
-        margin: .5rem 3rem;
+        margin: .5rem 5rem;
         text-align: left;
         max-width: 100%;
         font-size: 1.5rem;
@@ -1117,7 +1123,7 @@ button:focus {
         justify-content: space-between;
         align-items: center;
         gap: 0 2rem;
-        margin: 1rem 6.31rem;
+        margin: 1rem 5rem;
         text-transform: uppercase;
     
         h4{
@@ -1126,7 +1132,7 @@ button:focus {
             white-space: nowrap;
         }
         h3{
-            font-size: 2rem;
+            font-size: 1.75rem;
             padding-top: 1rem;
             white-space: nowrap;
         }
@@ -1137,7 +1143,7 @@ button:focus {
             justify-content: flex-start;
             align-items: flex-start;
             border: 1px solid rgba(255,255,255,.5);
-            padding: 2rem;
+            padding: 1.25rem;
             width: 100%;
     
             h3, h4{

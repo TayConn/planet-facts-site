@@ -1220,9 +1220,15 @@ button:focus {
         justify-self: stretch;
     width: 100%;
     text-align: left;
+    margin-top: 3rem;
   }
   .planet_main .item-info h1 {
     padding-bottom: 1rem;
+    font-size: 4rem;
+  }
+  .planet_main .item-info p {
+    font-size: 1.2rem;
+    line-height: 1.75rem;
   }
   .planet_main .item-buttons {
     -ms-grid-row: 2;
@@ -1236,7 +1242,7 @@ button:focus {
     width: 100%;
   }
   .planet_highlights {
-    margin: .5rem 3rem;
+    margin: .5rem 5rem;
     text-align: left;
     max-width: 100%;
     font-size: 1.5rem;
@@ -1334,7 +1340,7 @@ button:focus {
         -ms-flex-align: center;
             align-items: center;
     gap: 0 2rem;
-    margin: 1rem 6.31rem;
+    margin: 1rem 5rem;
     text-transform: uppercase;
   }
   .planet_details h4 {
@@ -1343,7 +1349,7 @@ button:focus {
     white-space: nowrap;
   }
   .planet_details h3 {
-    font-size: 2rem;
+    font-size: 1.75rem;
     padding-top: 1rem;
     white-space: nowrap;
   }
@@ -1362,7 +1368,7 @@ button:focus {
         -ms-flex-align: start;
             align-items: flex-start;
     border: 1px solid rgba(255, 255, 255, 0.5);
-    padding: 2rem;
+    padding: 1.25rem;
     width: 100%;
   }
   .planet_details .planet_details_sub h3, .planet_details .planet_details_sub h4 {
