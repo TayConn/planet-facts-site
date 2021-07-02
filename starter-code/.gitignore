@@ -17,3 +17,5 @@
 
 ### Remove API config key from being seen ##
 config.js
+###remove nasa files
+nasa.scss

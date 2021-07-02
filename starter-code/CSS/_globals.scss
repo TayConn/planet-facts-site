@@ -309,7 +309,7 @@ body{
         margin: 2rem 0 1.5rem 0;
     }
     .Mercury{
-        width: 7.93rem;
+        width: 12rem;
         margin-top: 3rem;
         margin-bottom: 3rem;
     }
@@ -324,7 +324,7 @@ body{
         margin-bottom: 3rem;
     }
     .Mars{
-        width: 9rem;
+        width: 12rem;
         margin-top: 3rem;
         margin-bottom: 3rem;
     }
@@ -348,6 +348,24 @@ body{
         margin-top: 3rem;
         margin-bottom: 3rem;
     }
+}
+.planetGeo__imgSize{
+    margin: 0;
+    padding: 0;
+    width: 8rem;
+}
+
+#geo_stack_back{
+    position: relative;
+    z-index: -2;
+    
+}
+#geo_stack_front{
+   position: absolute;
+   z-index: 1;
+   transform: rotate(-45deg);
+   margin-left: -14%;
+   margin-top: 30%;
 }
 //planet details tabs/buttons//
     .planet_detailsMenu{
@@ -428,80 +446,6 @@ body{
             width: 100%;
         }
     }
-
-    .nasa_wrapper{
-        display: flex;
-        flex-flow: row-reverse wrap;
-        justify-content: center;
-        align-items: center;
-        gap: 2rem;
-        margin: 3rem .5rem 3rem;
-        border-top: 1.5px solid rgba(255,255,255,.5);
-    }
-
-    .nasa_overview_wrapper{
-        display: flex;
-        flex-flow: column nowrap;
-        justify-content: flex-start;
-        align-items: center;
-        gap: .5rem;
-        width: 100%;
-        text-align: center;
-
-        h2{
-            margin-bottom: 0;
-        }
-        p{
-            margin: 0;
-        }
-        #title_POTD{
-            border: 1.5px solid rgba(255,255,255,.5);
-            padding: 1rem .5rem;
-        }
-        button{
-            text-transform: inherit;
-            border: 1px solid rgba(255,255,255,.15);
-            padding: 1rem;
-            margin-top: 1rem;
-            margin-bottom: 1rem;
-
-            i{
-                padding-left: 1rem;
-            }
-        }
-    }
-   
-    .nasa_pic_details_wrapper{
-        display: flex;
-        flex-flow: column nowrap;
-        justify-content: center;
-        align-items: center;
-        gap: 1.5rem;
-        margin: 0 .5rem;
-        text-align: center;
-
-        img{
-            width: 90vw;
-            height: auto;
-            border-radius: 10px;
-        }
-    }
-    
-
-    .nasa_explained{
-        p{
-            display: none;
-            margin: 0 1rem;
-            font-size: 1.15rem;
-            line-height: 2rem;
-            
-        }
-        .button_show{
-            display: block;
-        } 
-    }
-    
-
 @media screen and (min-width: 699px) and (max-width: 1024px){
 //navigation menu//
 nav{
@@ -719,7 +663,7 @@ button:focus {
     margin:0;
 
     .Mercury{
-        width: 17.93rem;
+        width: 20rem;
         margin-bottom: 3rem;
     }
     .Venus{
@@ -751,6 +695,23 @@ button:focus {
         margin-bottom: 3rem;
     }
 }
+.planetGeo__imgSize{
+    margin: 0;
+    padding: 0;
+    width: 14rem;
+}
+#geo_stack_back{
+    position: relative;
+    z-index: -2;
+    
+}
+#geo_stack_front{
+   position: absolute;
+   z-index: 1;
+   transform: rotate(-45deg);
+   margin-left: -14%;
+   margin-top: 20%;
+}
 
 //additional details - doesnt change with button selection//
 .planet_details{
@@ -781,75 +742,11 @@ button:focus {
     }
 }
 
-.nasa_wrapper{
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    align-items: center;
-    gap: 2rem;
-    margin: 3rem .5rem 5rem;
-    border-top: 1.5px solid rgba(255,255,255,.5);
-}
-
-.nasa_overview_wrapper{
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: flex-start;
-    align-items: center;
-    gap: .5rem;
-    width: 100%;
-    text-align: center;
-
-    h2{
-        margin-bottom: 0;
-    }
-    p{
-        margin: 0;
-    }
-    #title_POTD{
-        border: 1.5px solid rgba(255,255,255,.5);
-        padding: 1rem .5rem;
-    }
-    button{
-        width: 30vw;
-        i{
-            padding-left: 4rem;
-        }
-    }
-}
-.nasa_pic_details_wrapper{
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
-    align-items: center;
-    gap: 1.5rem;
-    margin: 0 .5rem;
-    text-align: left;
-
-    p{
-        display: none;
-        font-size: 1.15rem;
-        line-height: 2rem;
-    }
-    img{
-        width: 90vw;
-        height: auto;
-        border-radius: 10px;
-    }
-    
-    
-    .button_show{
-        display: block;
-    }
-}
-
 }
 
 @media screen and (min-width: 1025px) and (max-width: 3840px){
     //navigation menu//
     
-
-
     nav{
         display: flex;
         flex-flow: row nowrap;
@@ -1116,32 +1013,19 @@ button:focus {
             width: 100%;
         }
     }
-    // #geology-img{
-    //     display: grid;
-    //     grid-template-columns: 1fr;
-    //     grid-template-rows: 1fr;
-    //     grid-template-areas:
-    //     "planetStack"
-    // }
 
-    // #geo_stack_back{
-    //     grid-area: planetStack;
-    //     align-self: stretch;
-    //     justify-self: stretch;
-    // }
-    // #geo_stack_front{
-    //     grid-area:planetStack;
-    //     justify-self: center;
-    //     align-self: end;
-    // }
     
     //Main Details section//
     .planet_highlights{
-        margin: .5rem;
+        margin: .5rem 3rem;
         text-align: left;
         max-width: 100%;
         font-size: 1.5rem;
         line-height: 2.5rem;
+
+        p{
+            margin: .5rem 0 0;
+        }
         
     }
     .source{
@@ -1172,8 +1056,6 @@ button:focus {
         .Venus{
             width: 29.625rem;
             margin-bottom: 3rem;
-            // z-index: -2;
-            // align-self: end;
             
         }
         .Earth{
@@ -1208,14 +1090,24 @@ button:focus {
         }
 
     }
+    
     .planetGeo__imgSize{
         margin: 0;
         padding: 0;
         width: 14rem;
-        // left: -50%;
-        // bottom: -50%;
-        // z-index: 0;
-        // position: relative;
+    }
+
+    #geo_stack_back{
+        position: relative;
+        z-index: -2;
+        
+    }
+    #geo_stack_front{
+       position: absolute;
+       z-index: 1;
+       transform: rotate(-45deg);
+       margin-left: -14%;
+       margin-top: 18%;
     }
     
     
@@ -1252,86 +1144,5 @@ button:focus {
         }
     }
 
-//NASA API styling//
-    .nasa_wrapper{
-        display: flex;
-        flex-flow: row wrap;
-        justify-content: center;
-        align-items: flex-start;
-        gap: 2rem;
-        margin: 3rem .5rem 5rem;
-        padding-top: 5rem;
-        border-top: 1.5px solid rgba(255,255,255,.5);
-    }
 
-    .nasa_overview_wrapper{
-        display: flex;
-        flex-flow: column nowrap;
-        justify-content: flex-start;
-        align-items: flex-start;
-        gap: .5rem;
-        width: 25vw;
-        text-align: left;
-
-        h2{
-            margin-top: 0;
-            margin-bottom: 0;
-            max-width: 85%;
-            font-size: 4rem;
-            line-height: 5rem;
-            padding-top: 0;
-        }
-        p{
-            margin: 0;
-        }
-
-        #title_POTD{
-            border: 1.5px solid rgba(255,255,255,.5);
-            padding: 1rem;
-        }
-
-        button{
-            margin-top: 2rem;
-            padding: 1rem;
-            max-width: 12vw;
-            text-transform: inherit;
-        }
-        button:hover{
-            border: 1px solid transparent;
-            background-color: $color_aqua;
-        }
-
-        i{
-            padding-left: 5rem;
-        }
-    }
-    .nasa_pic_details_wrapper{
-        display: flex;
-        flex-flow: column nowrap;
-        justify-content: center;
-        align-items: center;
-        gap: 1.5rem;
-        margin: 0 .5rem;
-        text-align: center;
-        width: 55%;
-
-        img{
-            width: 90%;
-            height: auto;
-            border-radius: 10px;
-        }
-    }
-    .nasa_explaned{
-        width: 100%;
-        padding: 1rem 0 2rem;
-        display: none;
-        font-size: 1.15rem;
-        line-height: 2rem;
-       
-        
-    }
-    .button_show{
-        display: block;
-    }
-    
 }
