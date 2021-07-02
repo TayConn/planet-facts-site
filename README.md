@@ -1,5 +1,7 @@
 # Planets fact site
 
+-[view live site](https://planet-facts-site.vercel.app/)
+
 ##Table of Contents
 
 - [The challenge](#the-challenge)
